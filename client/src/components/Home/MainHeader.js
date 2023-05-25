@@ -1,6 +1,8 @@
-const Header = () => {
+import "animate.css";
+
+const MainHeader = () => {
   return (
-    <header>
+    <div className="main-header-wrapper">
       <div className="logo-container">
         <div className="logo-image"></div>
       </div>
@@ -14,8 +16,8 @@ const Header = () => {
           <li>Kontakt</li>
         </ul>
       </div>
-    </header>
+    </div>
   );
 };
 
-export default Header;
+export default MainHeader;
