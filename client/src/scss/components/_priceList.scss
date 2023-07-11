@@ -1,0 +1,72 @@
+.price-list-main-container {
+    background-image: url("../../images/prices-section-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 700px;
+    padding-top: 40px;
+    .price-list-width-container {
+        max-width: 1080px;
+        margin: 0 auto;
+        .price-list-title {
+            display: flex;
+            justify-content: center;
+            font-family: "PT Serif";
+            text-transform: uppercase;
+            line-height: 70px;
+            letter-spacing: 3px;
+            font-weight: 100;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 35px;
+        }
+        .price-list-boxes-container {
+            display: flex;
+            justify-content: space-between;
+            .price-box {
+                background-color: white;
+                border: 3px solid #56c152;
+                width: 27%;
+                .price-box-price {
+                    font-family: "PT Serif";
+                    text-transform: uppercase;
+                    line-height: 36px;
+                    letter-spacing: 3px;
+                    font-weight: 100;
+                    font-size: 28px;
+                    color: black;
+                    border-bottom: 1px solid black;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    padding-bottom: 15px;
+                    text-transform: lowercase;
+                    width: 140px;
+                    span {
+                        font-size: 18px;
+                    }
+                }
+                .price-box-sessions-qty {
+                    font-family: "PT Serif";
+                    text-transform: uppercase;
+                    line-height: 70px;
+                    letter-spacing: 3px;
+                    font-weight: 100;
+                    font-size: 22px;
+                    font-style: italic;
+                    text-align: center;
+                    text-transform: lowercase;
+                }
+            }
+        }
+    }
+}
+
+.price-box-visible {
+    display: block;
+}
+
+.price-box-invisible {
+    display: none;
+}
+

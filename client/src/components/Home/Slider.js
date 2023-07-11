@@ -10,7 +10,7 @@ const Slider = () => {
   const { getNewSlide } = useSliderHook();
 
   useEffect(() => {
-    getNewSlide();
+    // getNewSlide();
   }, []);
   return (
     <div className="slider">
