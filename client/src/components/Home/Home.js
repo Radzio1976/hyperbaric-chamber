@@ -1,12 +1,12 @@
 import Header from "./Header";
-import OurTeam from "./OurTeam";
+import About from "./About";
 import PriceList from "./PriceList";
 
 const Home = () => {
   return (
     <div id="Home">
       <Header />
-      <OurTeam />
+      <About />
       <PriceList />
     </div>
   );

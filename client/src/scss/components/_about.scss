@@ -1,0 +1,33 @@
+.about {
+    width: 100%; 
+    .about-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 90px 142px;
+        .about-image {
+            background-image: url("../../images/marzena-image.png");
+            background-size: contain;
+            height: 530px;
+            width: 530px;
+            background-repeat: no-repeat;
+        }
+        .about-text {
+            width: 750px;
+            text-align: center;
+            h1 {
+                margin-bottom: 38px;
+                font-family: $font-montserrat;
+                line-height: 35px;
+                letter-spacing: 2px;
+                font-size: 55px;
+                text-transform: uppercase;
+            }
+            p {
+                font-family: $font-montserrat;
+                line-height: 35px;
+                letter-spacing: 2px;
+                font-size: 18px;
+            }
+        }
+    }
+}

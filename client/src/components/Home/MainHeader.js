@@ -9,7 +9,7 @@ const MainHeader = () => {
       <div className="main-menu-container">
         <ul>
           <li>Home</li>
-          <li>O nas</li>
+          <li>O mnie</li>
           <li>Tlenoterapia</li>
           <li>Komora hiperbaryczna</li>
           <li>Cennik</li>
