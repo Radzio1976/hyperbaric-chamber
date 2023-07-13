@@ -23,7 +23,7 @@ const PriceList = () => {
           className="price-list-boxes-container"
         >
           <div
-            className="price-box animate__animated animate__fadeInUpBig animate__delay-1s"
+            className="price-box animate__animated animate__lightSpeedInLeft animate__delay-1s"
             style={{
               display: isPriceBoxVisible ? "block" : "none",
             }}
@@ -34,7 +34,7 @@ const PriceList = () => {
             <h5 className="price-box-sessions-qty">1 sesja</h5>
           </div>
           <div
-            className="price-box animate__animated animate__fadeInUpBig animate__delay-2s"
+            className="price-box animate__animated animate__lightSpeedInLeft animate__delay-2s"
             style={{
               display: isPriceBoxVisible ? "block" : "none",
             }}
@@ -45,7 +45,7 @@ const PriceList = () => {
             <h5 className="price-box-sessions-qty">5 sesji</h5>
           </div>
           <div
-            className="price-box animate__animated animate__fadeInUpBig animate__delay-3s"
+            className="price-box animate__animated animate__lightSpeedInLeft animate__delay-3s"
             style={{
               display: isPriceBoxVisible ? "block" : "none",
             }}

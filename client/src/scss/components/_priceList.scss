@@ -1,17 +1,18 @@
 .price-list-main-container {
-    background-image: url("../../images/prices-section-background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 700px;
+    // background-image: url("../../images/prices-section-background.jpg");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    background-color: #181842;
     padding-top: 40px;
+    padding-bottom: 140px;
     .price-list-width-container {
         max-width: 1080px;
         margin: 0 auto;
         .price-list-title {
             display: flex;
             justify-content: center;
-            font-family: "PT Serif";
+            font-family: $font-montserrat;
             text-transform: uppercase;
             line-height: 70px;
             letter-spacing: 3px;
@@ -25,10 +26,10 @@
             justify-content: space-between;
             .price-box {
                 background-color: white;
-                border: 3px solid #56c152;
+                border: 3px solid #FD9800;
                 width: 27%;
                 .price-box-price {
-                    font-family: "PT Serif";
+                    font-family: $font-montserrat;
                     text-transform: uppercase;
                     line-height: 36px;
                     letter-spacing: 3px;
@@ -47,7 +48,8 @@
                     }
                 }
                 .price-box-sessions-qty {
-                    font-family: "PT Serif";
+                    font-family: $font-montserrat;
+                    font-style: italic;
                     text-transform: uppercase;
                     line-height: 70px;
                     letter-spacing: 3px;
