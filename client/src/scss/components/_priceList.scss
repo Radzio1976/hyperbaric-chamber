@@ -1,7 +1,7 @@
 .price-list-main-container {
-    height: 477px;
+    height: 600px;
     background-color: #181842;
-    padding-top: 40px;
+    padding-top: 90px;
     padding-bottom: 140px;
     overflow: hidden;
     .price-list-width-container {
@@ -22,10 +22,12 @@
         .price-list-boxes-container {
             display: flex;
             justify-content: space-between;
+            height: 250px;
             .price-box {
                 background-color: white;
                 border: 3px solid #FD9800;
                 width: 27%;
+                padding-top: 25px;
                 .price-box-price {
                     font-family: $font-montserrat;
                     text-transform: uppercase;

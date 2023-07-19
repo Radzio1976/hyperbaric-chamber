@@ -1,4 +1,5 @@
 import AppState from "./AppState";
+import googleReviews from "../data/googleReviews";
 
 const useGoogleReviewsSliderHook = () => {
   const { googleReviews, googleReviewsForSlider, setGoogleReviewsForSlider } =

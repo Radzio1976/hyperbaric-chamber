@@ -7,6 +7,8 @@ import useGoToGoogleReviewHook from "../../hooks/useGoToGoogleReviewHook";
 import useGoogleReviewsSliderHook from "../../hooks/useGoogleReviewsSliderHook";
 import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScrollTo";
 
+import googleReviews from "../../data/googleReviews";
+
 const LatestReviews = () => {
   const {
     googleReviewsStars,
@@ -28,6 +30,7 @@ const LatestReviews = () => {
     showElementWhenScrollTo(reviewsRef, setIsLatestReviewsBoxVisible);
   }, []);
 
+  console.log(googleReviewsForSlider);
   return (
     <div className="latest-reviews-container" ref={reviewsRef}>
       <div className="latest-reviews-boxes">
