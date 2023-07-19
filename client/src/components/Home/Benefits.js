@@ -1,13 +1,28 @@
+import { useEffect } from "react";
+
 import AppState from "../../hooks/AppState";
+import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScrollTo";
 
 const Benefits = () => {
-  const { benefitsRef } = AppState();
+  const { isBenefitsBoxVisible, setIsBenefitsBoxVisible, benefitsRef } =
+    AppState();
+  const { showElementWhenScrollTo } = useShowElementWhenToScrollTo();
+
+  useEffect(() => {
+    showElementWhenScrollTo(benefitsRef, setIsBenefitsBoxVisible);
+  }, []);
+
   return (
     <div className="benefits-container" ref={benefitsRef}>
       <div className="benevits-boxes">
         <div className="benefits-boxes-top">
-          <div className="benefits-box animate__animated animate__lightSpeedInLeft animate__delay-1s">
-            <div className="benefits-box-icon benefits-box-icon-neurologia"></div>
+          <div className="benefits-box">
+            <div
+              className="benefits-box-icon benefits-box-icon-neurologia animate__animated animate__lightSpeedInLeft animate__delay-1s"
+              style={{
+                display: isBenefitsBoxVisible ? "block" : "none",
+              }}
+            ></div>
             <h3>Neurologia</h3>
             <p>
               Ma zastosowanie w poraże- niach mózgowych i pourazowych
@@ -17,8 +32,13 @@ const Benefits = () => {
               mózgu, przez co wspomaga prawidłową pracę układu nerwowego ...
             </p>
           </div>
-          <div className="benefits-box animate__animated animate__lightSpeedInLeft animate__delay-1s">
-            <div className="benefits-box-icon benefits-box-icon-medycyna-sportowa"></div>
+          <div className="benefits-box">
+            <div
+              className="benefits-box-icon benefits-box-icon-medycyna-sportowa animate__animated animate__lightSpeedInLeft animate__delay-1s"
+              style={{
+                display: isBenefitsBoxVisible ? "block" : "none",
+              }}
+            ></div>
             <h3>Medycyna sportowa</h3>
             <p>
               Podnosi wydolność fizyczną, przyspiesza procesy regeneracji tkanki
@@ -27,8 +47,13 @@ const Benefits = () => {
               szkieletowych.
             </p>
           </div>
-          <div className="benefits-box animate__animated animate__lightSpeedInRight animate__delay-1s">
-            <div className="benefits-box-icon benefits-box-icon-medycyna-estetyczna"></div>
+          <div className="benefits-box">
+            <div
+              className="benefits-box-icon benefits-box-icon-medycyna-estetyczna animate__animated animate__lightSpeedInRight animate__delay-1s"
+              style={{
+                display: isBenefitsBoxVisible ? "block" : "none",
+              }}
+            ></div>
             <h3>Medycyna estetyczna</h3>
             <p>
               Działa stymulująco na fibroblasty, odpowiedzialne za syntezę
@@ -38,8 +63,13 @@ const Benefits = () => {
               antybakteryjnie.
             </p>
           </div>
-          <div className="benefits-box animate__animated animate__lightSpeedInRight animate__delay-1s">
-            <div className="benefits-box-icon benefits-box-icon-dermatologia"></div>
+          <div className="benefits-box">
+            <div
+              className="benefits-box-icon benefits-box-icon-dermatologia animate__animated animate__lightSpeedInRight animate__delay-1s"
+              style={{
+                display: isBenefitsBoxVisible ? "block" : "none",
+              }}
+            ></div>
             <h3>Dermatologia</h3>
             <p>
               Terapia ma zastosowanie w leczeniu trądziku, łuszczycy, atopowego
@@ -54,8 +84,13 @@ const Benefits = () => {
           <h2>Korzyści z tlenoterapii</h2>
         </div>
         <div className="benefits-boxes-bottom">
-          <div className="benefits-box animate__animated animate__lightSpeedInLeft animate__delay-1s">
-            <div className="benefits-box-icon benefits-box-icon-ortopedia"></div>
+          <div className="benefits-box">
+            <div
+              className="benefits-box-icon benefits-box-icon-ortopedia animate__animated animate__lightSpeedInLeft animate__delay-1s"
+              style={{
+                display: isBenefitsBoxVisible ? "block" : "none",
+              }}
+            ></div>
             <h3>Ortopedia</h3>
             <p>
               Poprawia przepływ krwi w uszkodzonych kończynach, zwiększa
@@ -65,8 +100,13 @@ const Benefits = () => {
               naczyń krwionośnych prowadzące do zmniejszenia obrzęku.
             </p>
           </div>
-          <div className="benefits-box animate__animated animate__lightSpeedInLeft animate__delay-1s">
-            <div className="benefits-box-icon benefits-box-icon-onkologia"></div>
+          <div className="benefits-box">
+            <div
+              className="benefits-box-icon benefits-box-icon-onkologia animate__animated animate__lightSpeedInLeft animate__delay-1s"
+              style={{
+                display: isBenefitsBoxVisible ? "block" : "none",
+              }}
+            ></div>
             <h3>Onkologia</h3>
             <p>
               Sprzyja rewitalizacji komórek i zapobiega dalszym uszkodzeniom.
@@ -77,8 +117,13 @@ const Benefits = () => {
               ...
             </p>
           </div>
-          <div className="benefits-box animate__animated animate__lightSpeedInRight animate__delay-1s">
-            <div className="benefits-box-icon benefits-box-icon-kardiologia"></div>
+          <div className="benefits-box">
+            <div
+              className="benefits-box-icon benefits-box-icon-kardiologia animate__animated animate__lightSpeedInRight animate__delay-1s"
+              style={{
+                display: isBenefitsBoxVisible ? "block" : "none",
+              }}
+            ></div>
             <h3>Kardiologia</h3>
             <p>
               Korzystny wpływ na dolegliwości o charakterze wieńcowym. Zmniejsza
@@ -89,8 +134,13 @@ const Benefits = () => {
               ...
             </p>
           </div>
-          <div className="benefits-box animate__animated animate__lightSpeedInRight animate__delay-1s">
-            <div className="benefits-box-icon benefits-box-icon-inne-wskazania"></div>
+          <div className="benefits-box">
+            <div
+              className="benefits-box-icon benefits-box-icon-inne-wskazania animate__animated animate__lightSpeedInRight animate__delay-1s"
+              style={{
+                display: isBenefitsBoxVisible ? "block" : "none",
+              }}
+            ></div>
             <h3>Inne wskazania</h3>
             <p>
               Przyspiesza przemianę materii w walce z nadwagą i otyłością.

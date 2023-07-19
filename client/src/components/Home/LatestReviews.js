@@ -1,21 +1,31 @@
-import AppState from "../../hooks/AppState";
-import GoogleStar from "../../images/googleStar.png";
-
-import useGoToGoogleReviewHook from "../../hooks/useGoToGoogleReviewHook";
-import useGoogleReviewsSliderHook from "../../hooks/useGoogleReviewsSliderHook";
 import { useEffect } from "react";
 
+import GoogleStar from "../../images/googleStar.png";
+
+import AppState from "../../hooks/AppState";
+import useGoToGoogleReviewHook from "../../hooks/useGoToGoogleReviewHook";
+import useGoogleReviewsSliderHook from "../../hooks/useGoogleReviewsSliderHook";
+import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScrollTo";
+
 const LatestReviews = () => {
-  const { googleReviewsStars, googleReviewsForSlider, reviewsRef } = AppState();
+  const {
+    googleReviewsStars,
+    googleReviewsForSlider,
+    isLatestReviewsBoxVisible,
+    setIsLatestReviewsBoxVisible,
+    reviewsRef,
+  } = AppState();
   const { goToGoogleReview } = useGoToGoogleReviewHook();
   const {
     changeReviewsSlides,
     nextGoogleReviewsForSlider,
     prevGoogleReviewsForSlider,
   } = useGoogleReviewsSliderHook();
+  const { showElementWhenScrollTo } = useShowElementWhenToScrollTo();
 
   useEffect(() => {
     changeReviewsSlides();
+    showElementWhenScrollTo(reviewsRef, setIsLatestReviewsBoxVisible);
   }, []);
 
   return (
@@ -37,6 +47,9 @@ const LatestReviews = () => {
                 onClick={() => goToGoogleReview(review.reviewLink)}
                 key={review.id}
                 className="review-box animate__animated animate__lightSpeedInRight animate__delay-1s"
+                style={{
+                  display: isLatestReviewsBoxVisible ? "block" : "none",
+                }}
               >
                 <div className="user-avatar-and-name">
                   <img src={review.userAvatar} alt={review.name}></img>

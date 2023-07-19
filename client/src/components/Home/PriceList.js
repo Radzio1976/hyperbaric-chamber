@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import AppState from "../../hooks/AppState";
 import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScrollTo";
@@ -6,10 +6,9 @@ import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScroll
 const PriceList = () => {
   const { isPriceBoxVisible, setIsPriceBoxVisible, priceListRef } = AppState();
   const { showElementWhenScrollTo } = useShowElementWhenToScrollTo();
-  const priceListBoxesContainerRef = useRef(null);
 
   useEffect(() => {
-    showElementWhenScrollTo(priceListBoxesContainerRef, setIsPriceBoxVisible);
+    showElementWhenScrollTo(priceListRef, setIsPriceBoxVisible);
   }, []);
 
   return (
@@ -18,10 +17,7 @@ const PriceList = () => {
         <div className="price-list-title">
           <h2>Cennik</h2>
         </div>
-        <div
-          ref={priceListBoxesContainerRef}
-          className="price-list-boxes-container"
-        >
+        <div className="price-list-boxes-container">
           <div
             className="price-box animate__animated animate__lightSpeedInLeft animate__delay-1s"
             style={{

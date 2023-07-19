@@ -1,12 +1,9 @@
 .price-list-main-container {
-    // background-image: url("../../images/prices-section-background.jpg");
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
     height: 477px;
     background-color: #181842;
     padding-top: 40px;
     padding-bottom: 140px;
+    overflow: hidden;
     .price-list-width-container {
         max-width: 1080px;
         margin: 0 auto;
