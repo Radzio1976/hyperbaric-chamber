@@ -4,9 +4,8 @@ import AppState from "../../hooks/AppState";
 import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScrollTo";
 
 const About = () => {
-  const { isAboutBoxVisible, setIsAboutBoxVisible } = AppState();
+  const { isAboutBoxVisible, setIsAboutBoxVisible, aboutRef } = AppState();
   const { showElementWhenScrollTo } = useShowElementWhenToScrollTo();
-  const aboutRef = useRef(null);
 
   useEffect(() => {
     showElementWhenScrollTo(aboutRef, setIsAboutBoxVisible);

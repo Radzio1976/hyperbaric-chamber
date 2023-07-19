@@ -1,0 +1,88 @@
+.latest-reviews-container {
+    height: 800px;
+    padding-top: 55px;
+    background-color: #734ac3;
+    .latest-reviews-boxes {
+        width: 1250px;
+        margin: 0 auto;
+        .latest-reviews-boxes-title {
+            text-align: center;
+            padding-left: 20%;
+            padding-right: 20%;
+            h2 {
+                margin-bottom: 20px;
+                font-family: $font-montserrat;
+                font-size: 44px;
+                font-weight: bold;
+                color: #fff;
+            }
+            p {
+                color: #fff;
+                margin-bottom: 50px;
+                font-family: $font-montserrat;
+            }
+        }
+        .latest-reviews-boxes-container {
+            display: flex;
+            justify-content: space-between;
+            height: 395px;
+            margin-bottom: 50px;
+            .review-box {
+                width: 32.5%;
+                padding: 35px;
+                background-color: #fff;
+                cursor: pointer;
+                .user-avatar-and-name {
+                    display: flex;
+                    font-family: $font-montserrat;
+                    margin-bottom: 12px;
+                    img {
+                        width: 55px;
+                        margin-right: 25px;
+                    }
+                }
+                .review-stars-qty {
+                    margin-bottom: 12px;
+                }
+                .review-text {
+                    height: 130px;
+                    font-family: $font-montserrat;
+                    overflow: hidden;
+                    margin-bottom: 15px;
+                }
+                .review-read-more {
+                    font-family: $font-montserrat;
+                    color: #409ae9;
+                    margin-bottom: 25px;
+                }
+                .review-date {
+                    font-family: $font-montserrat;
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .review-prev-and-next-arrows {
+            display: flex;
+            justify-content: center;
+            .slider-prev-button {
+                background-image: url("../../images/prev-button.png");
+                background-size: contain;
+                height: 50px;
+                width: 30px;
+                margin-right: 80px;
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
+            .slider-next-button {
+                background-image: url("../../images/next-button.png");
+                background-size: contain;
+                height: 50px;
+                width: 30px;
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
+        }
+    }
+}

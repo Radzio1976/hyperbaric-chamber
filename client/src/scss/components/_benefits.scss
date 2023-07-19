@@ -1,0 +1,90 @@
+.benefits-container {
+    height: 1100px;
+    padding-top: 100px;
+    padding-left: 190px;
+    padding-right: 190px;
+    .benefits-boxes-top {
+        display: flex;
+        justify-content: space-between;
+        .benefits-box {
+            border: 3px solid #42a0de;
+            width: 24%;
+            height: 370px;
+            text-align: center;
+            font-family: $font-montserrat;
+            padding-left: 20px;
+            padding-right: 20px;
+            h3 {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            .benefits-box-icon {
+                background-color: #fff;
+                margin: 0 auto;
+                margin-top: -47px;
+                height: 80px;
+                width: 100px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position-x: center;
+            }
+            .benefits-box-icon-neurologia {
+                background-image: url("../../images/dermatologia.png");
+            }
+            .benefits-box-icon-medycyna-sportowa {
+                background-image: url("../../images/medycyna-sportowa.png");
+            }
+            .benefits-box-icon-medycyna-estetyczna {
+                background-image: url("../../images/medycyna-estetyczna.png");
+            }
+            .benefits-box-icon-dermatologia {
+                background-image: url("../../images/dermatologia.png");
+            }
+        }
+    }
+    .benefits-boxes-title {
+        font-family: $font-montserrat;
+        padding-top: 45px;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+    .benefits-boxes-bottom {
+        display: flex;
+        justify-content: space-between;
+        .benefits-box {
+            border: 3px solid #42a0de;
+            width: 24%;
+            height: 370px;
+            text-align: center;
+            font-family: $font-montserrat;
+            padding-left: 20px;
+            padding-right: 20px;
+            h3 {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            .benefits-box-icon {
+                background-color: #fff;
+                margin: 0 auto;
+                margin-top: -47px;
+                height: 80px;
+                width: 100px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position-x: center;
+            }
+            .benefits-box-icon-ortopedia {
+                background-image: url("../../images/ortopedia.png");
+            }
+            .benefits-box-icon-onkologia {
+                background-image: url("../../images/onkologia.png");
+            }
+            .benefits-box-icon-kardiologia {
+                background-image: url("../../images/kardiologia.png");
+            }
+            .benefits-box-icon-inne-wskazania {
+                background-image: url("../../images/inne-wskazania.png");
+            }
+        }
+    }
+}
