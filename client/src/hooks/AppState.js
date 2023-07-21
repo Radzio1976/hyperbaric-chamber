@@ -16,6 +16,9 @@ const initialState = {
   googleReviewsStars: [1, 2, 3, 4, 5],
   googleReviews: googleReviews(),
   googleReviewsForSlider: [],
+  inputName: "",
+  inputEmail: "",
+  inputText: "",
 };
 
 const { useGlobalState } = createGlobalState(initialState);
@@ -42,6 +45,9 @@ const AppState = () => {
   const [googleReviewsForSlider, setGoogleReviewsForSlider] = useGlobalState(
     "googleReviewsForSlider"
   );
+  const [inputName, setInputName] = useGlobalState("inputName");
+  const [inputEmail, setInputEmail] = useGlobalState("inputEmail");
+  const [inputText, setInputText] = useGlobalState("inputText");
 
   return {
     sliderCounter,
@@ -70,6 +76,12 @@ const AppState = () => {
     setGoogleReviewsStars,
     googleReviewsForSlider,
     setGoogleReviewsForSlider,
+    inputName,
+    setInputName,
+    inputEmail,
+    setInputEmail,
+    inputText,
+    setInputText,
   };
 };
 

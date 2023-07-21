@@ -1,9 +1,15 @@
 import Iframe from "react-iframe";
 
 import AppState from "../../hooks/AppState";
+import useInputChangeHook from "../../hooks/useInputChangeHook";
 
 const Contact = () => {
-  const { contactRef } = AppState();
+  const { contactRef, inputName, inputEmail, inputText } = AppState();
+  const { inputNameChange, inputEmailChange, inputTextChange } =
+    useInputChangeHook();
+  console.log(inputName);
+  console.log(inputEmail);
+  console.log(inputText);
   return (
     <div className="contact-container" ref={contactRef}>
       <div className="contact-width-container">
@@ -42,9 +48,24 @@ const Contact = () => {
           </div>
           <div className="contact-form-box">
             <form>
-              <input placeholder="Imię"></input>
-              <input placeholder="Email"></input>
-              <textarea placeholder="Napisz coś..."></textarea>
+              <input
+                placeholder="Imię"
+                name="inputName"
+                value={inputName}
+                onChange={(e) => inputNameChange(e)}
+              ></input>
+              <input
+                placeholder="Email"
+                name="inputEmail"
+                value={inputEmail}
+                onChange={(e) => inputEmailChange(e)}
+              ></input>
+              <textarea
+                placeholder="Napisz coś..."
+                name="inputText"
+                value={inputText}
+                onChange={(e) => inputTextChange(e)}
+              ></textarea>
               <button>Wyślij</button>
             </form>
           </div>
