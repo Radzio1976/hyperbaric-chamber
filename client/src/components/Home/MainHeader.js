@@ -4,7 +4,8 @@ import AppState from "../../hooks/AppState";
 import useScrollToSectionHook from "../../hooks/useScrollToSectionHook";
 
 const MainHeader = () => {
-  const { aboutRef, priceListRef, benefitsRef, reviewsRef } = AppState();
+  const { aboutRef, priceListRef, benefitsRef, reviewsRef, contactRef } =
+    AppState();
   const { scrollToSection } = useScrollToSectionHook();
   return (
     <div className="main-header-wrapper">
@@ -18,7 +19,7 @@ const MainHeader = () => {
           <li onClick={() => scrollToSection(priceListRef)}>Cennik</li>
           <li onClick={() => scrollToSection(benefitsRef)}>Korzyści</li>
           <li onClick={() => scrollToSection(reviewsRef)}>Opinie</li>
-          <li>Kontakt</li>
+          <li onClick={() => scrollToSection(contactRef)}>Kontakt</li>
         </ul>
       </div>
     </div>

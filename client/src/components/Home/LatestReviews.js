@@ -30,7 +30,6 @@ const LatestReviews = () => {
     showElementWhenScrollTo(reviewsRef, setIsLatestReviewsBoxVisible);
   }, []);
 
-  console.log(googleReviewsForSlider);
   return (
     <div className="latest-reviews-container" ref={reviewsRef}>
       <div className="latest-reviews-boxes">

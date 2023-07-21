@@ -1,0 +1,19 @@
+.footer-container {
+    background-color: #e4e4e4;
+    .footer-width-container {
+        position: relative;
+        margin: 0 auto;
+        p {
+            position: absolute;
+            top: 59%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .footer-developed-by {
+            color: #42a0de;
+        }
+        .footer-developer-name {
+            color: #fff;
+        }
+    }
+}

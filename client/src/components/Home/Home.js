@@ -3,6 +3,8 @@ import About from "./About";
 import PriceList from "./PriceList";
 import Benefits from "./Benefits";
 import LatestReviews from "./LatestReviews";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -12,6 +14,8 @@ const Home = () => {
       <PriceList />
       <Benefits />
       <LatestReviews />
+      <Contact />
+      <Footer />
     </div>
   );
 };

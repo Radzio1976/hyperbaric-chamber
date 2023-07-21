@@ -1,0 +1,99 @@
+.contact-container {
+    height: 800px;
+    padding-top: 70px;
+    background-color: #e4e4e4;
+    .contact-width-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 63%;
+        .map-and-address-container {
+            width: 48%;
+            .map-and-address-title {
+                margin-bottom: 30px;
+                h2 {
+                    font-family: $font-montserrat;
+                    font-size: 30px;
+            }
+            }
+            .map-container {
+                height: 190px;
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0px;
+                    display: block;
+                    position: relative;
+                }
+            }
+            .address-container {
+                font-family: $font-montserrat;
+                padding-top: 30px;
+                h3 {
+                    margin-bottom: 10px;
+                }
+                .address-phone {
+                    margin-top: 8px;;
+                }
+                .address-nip {
+                    margin-top: 8px;;
+                }
+            }
+            .address-working-hours {
+                font-family: $font-montserrat;
+                padding-top: 20px;
+                h3 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .contact-form-container {
+            width: 48%;
+            font-family: $font-montserrat;
+            .contact-form-title {
+                margin-bottom: 30px;
+                h2 {
+                    font-size: 30px;
+                }
+            }
+            .contact-form-box {
+                form {
+                    input, textarea {
+                        display: block;
+                        width: 100%;
+                        height: 46px;
+                        margin-bottom: 20px;
+                        border: 1px solid #fff;
+                        border-radius: 0px;
+                        // background-color: #181842;
+                        // border: 1px solid #181842;
+                        font-family: $font-montserrat;
+                        font-size: 16px;
+                        color: black;
+                        outline: none;
+                    }
+                    input {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    textarea {
+                        height: 200px;
+                        padding: 3px 10px;
+                    }
+                    button {
+                        border: 1px solid black;
+                        border-radius: 0px;
+                        padding: 13px 37px;
+                        font-family: $font-montserrat;
+                        font-size: 15px;
+                        background-color: #fefefe;
+                        border: 1px solid #fefefe;
+                    }
+                    ::placeholder {
+                        color: #black;
+                    }
+                }
+            }
+        }
+    }
+}

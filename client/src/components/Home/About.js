@@ -33,7 +33,7 @@ const About = () => {
             Od dwóch lat prowadzę sesje terapii tlenowej. Mam za sobą
             przeprowadzonych około 1000 sesji z pacjentami w komorze
             hiperbarycznej. Terapia tlenowa w komorze hiperbarycznej to medyczna
-            procedura, w której pacjent oddycha 100% tlenem pod zwiększonym
+            procedura, w której pacjent oddycha 98% tlenem pod zwiększonym
             ciśnieniem atmosferycznym w specjalnej komorze hiperbarycznej.
             Wysokie ciśnienie sprawia, że tlen jest rozpuszczony w płynach
             ustrojowych i krwiobiegu w większych ilościach niż przy oddychaniu w

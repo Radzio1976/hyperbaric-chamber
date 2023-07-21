@@ -12,6 +12,7 @@ const initialState = {
   priceListRef: createRef(),
   benefitsRef: createRef(),
   reviewsRef: createRef(),
+  contactRef: createRef(),
   googleReviewsStars: [1, 2, 3, 4, 5],
   googleReviews: googleReviews(),
   googleReviewsForSlider: [],
@@ -34,6 +35,7 @@ const AppState = () => {
   const [priceListRef, setPriceListRef] = useGlobalState("priceListRef");
   const [benefitsRef, setBenefitsRef] = useGlobalState("benefitsRef");
   const [reviewsRef, setReviewsRef] = useGlobalState("reviewsRef");
+  const [contactRef, setContactRef] = useGlobalState("contactRef");
   const [googleReviewsStars, setGoogleReviewsStars] =
     useGlobalState("googleReviewsStars");
   const [googleReviews, setGoogleReviews] = useGlobalState("googleReviews");
@@ -60,6 +62,8 @@ const AppState = () => {
     setBenefitsRef,
     reviewsRef,
     setReviewsRef,
+    contactRef,
+    setContactRef,
     googleReviews,
     setGoogleReviews,
     googleReviewsStars,
