@@ -8,6 +8,7 @@ const initialState = {
   isAboutBoxVisible: true,
   isBenefitsBoxVisible: true,
   isLatestReviewsBoxVisible: true,
+  isContactBoxVisible: true,
   aboutRef: createRef(),
   priceListRef: createRef(),
   benefitsRef: createRef(),
@@ -17,8 +18,14 @@ const initialState = {
   googleReviews: googleReviews(),
   googleReviewsForSlider: [],
   inputName: "",
+  inputNameError: "Pole imię musi zawierać conajmniej 5 znaków",
   inputEmail: "",
+  inputEmailError: "Pole email musi zawierać conajmniej 5 znaków oraz @",
+  inputSubject: "",
+  inputSubjectError: "Pole temat musi zawierać conajmniej 5 znaków",
   inputText: "",
+  inputTextError: "Pole tekst musi zawierać conajmniej 20 znaków",
+  sendEmailSuccess: false,
 };
 
 const { useGlobalState } = createGlobalState(initialState);
@@ -34,6 +41,9 @@ const AppState = () => {
   );
   const [isLatestReviewsBoxVisible, setIsLatestReviewsBoxVisible] =
     useGlobalState("isLatestReviewsBoxVisible");
+  const [isContactBoxVisible, setIsContactBoxVisible] = useGlobalState(
+    "isContactBoxVisible"
+  );
   const [aboutRef, setAboutRef] = useGlobalState("aboutRef");
   const [priceListRef, setPriceListRef] = useGlobalState("priceListRef");
   const [benefitsRef, setBenefitsRef] = useGlobalState("benefitsRef");
@@ -46,8 +56,15 @@ const AppState = () => {
     "googleReviewsForSlider"
   );
   const [inputName, setInputName] = useGlobalState("inputName");
+  const [inputNameError] = useGlobalState("inputNameError");
   const [inputEmail, setInputEmail] = useGlobalState("inputEmail");
+  const [inputEmailError] = useGlobalState("inputEmailError");
+  const [inputSubject, setInputSubject] = useGlobalState("inputSubject");
+  const [inputSubjectError] = useGlobalState("inputSubjectError");
   const [inputText, setInputText] = useGlobalState("inputText");
+  const [inputTextError] = useGlobalState("inputTextError");
+  const [sendEmailSuccess, setSendEmailSuccess] =
+    useGlobalState("sendEmailSuccess");
 
   return {
     sliderCounter,
@@ -60,6 +77,8 @@ const AppState = () => {
     setIsBenefitsBoxVisible,
     isLatestReviewsBoxVisible,
     setIsLatestReviewsBoxVisible,
+    isContactBoxVisible,
+    setIsContactBoxVisible,
     aboutRef,
     setAboutRef,
     priceListRef,
@@ -78,10 +97,18 @@ const AppState = () => {
     setGoogleReviewsForSlider,
     inputName,
     setInputName,
+    inputNameError,
     inputEmail,
     setInputEmail,
+    inputEmailError,
+    inputSubject,
+    setInputSubject,
+    inputSubjectError,
     inputText,
     setInputText,
+    inputTextError,
+    sendEmailSuccess,
+    setSendEmailSuccess,
   };
 };
 
