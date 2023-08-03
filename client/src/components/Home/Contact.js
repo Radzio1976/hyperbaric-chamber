@@ -37,7 +37,7 @@ const Contact = () => {
     showElementWhenScrollTo(contactRef, setIsContactBoxVisible);
   }, []);
   return (
-    <div className="contact-container" ref={contactRef}>
+    <div className="contact-section" ref={contactRef}>
       {sendEmailSuccess ? (
         <div className="contact-send-email-success">
           <h2>Wiadomość wysłana pomyślnie</h2>

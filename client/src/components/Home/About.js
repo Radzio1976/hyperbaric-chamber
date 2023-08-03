@@ -12,7 +12,7 @@ const About = () => {
   }, []);
 
   return (
-    <div ref={aboutRef} className="about">
+    <div ref={aboutRef} className="about-section">
       <div className="about-container">
         <div className="about-image-container">
           <div

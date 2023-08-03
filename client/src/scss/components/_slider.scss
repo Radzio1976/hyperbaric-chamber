@@ -1,0 +1,134 @@
+.slider {
+    height: 100vh;
+    overflow: hidden;
+    .slider-prev-and-next-buttons-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 98%;
+        margin-left: 10px;
+        margin-right: 10px;
+        position: absolute;
+        z-index: 1;
+        // div {
+        //     display: flex;
+        //     align-items: center
+        // }
+        .slider-prev-button {
+            background-image: url("../../images/prev-button.png");
+            background-size: contain;
+            height: 50px;
+            width: 30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .slider-next-button {
+            background-image: url("../../images/next-button.png");
+            background-size: contain;
+            height: 50px;
+            width: 30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    }   
+    .slide {
+        display: flex;
+        justify-content: flex-end;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        .slider-info {
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            width: 100%;
+            // margin-top: 143px;
+            // margin-right: 270px;
+            padding-top: 89px;
+            padding-left: 8%;
+            .slider-info-komora {
+                font-family: $font-montserrat;
+                line-height: 35px;
+                letter-spacing: 2px;
+                font-size: 86px;
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: 100;
+            }
+            .slider-info-hiperbaryczna {
+                font-family: $font-league-spartan;
+                margin-top: 64px;
+                line-height: 35px;
+                letter-spacing: 2px;
+                font-size: 67px;
+                text-transform: uppercase;
+                color: #fd9800;
+                font-weight: 100;
+            }
+            .slider-info-jelenia-gora {
+                font-family: $font-league-spartan;
+                margin-top: 57px;
+                line-height: 35px;
+                font-size: 67px;
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: 100;
+            }
+            .slider-info-terapia-tlenowa {
+                font-family: $font-montserrat;
+                margin-top: 65px;
+                line-height: 70px;
+                letter-spacing: 3px;
+                font-weight: 100;
+                font-size: 58px;
+                font-style: italic;
+                color: #fff;
+            }
+            .slider-info-zarezerwuj-wizyte {
+                font-family: $font-montserrat;
+                width: max-content;
+                margin-top: 73px;
+                padding-left: 23px;
+                padding-right: 23px;
+                line-height: 70px;
+                letter-spacing: 1px;
+                font-weight: 100;
+                font-size: 31px;
+                color: black;
+                border: 1px solid #fd9800;
+                border-radius: 38px;
+                background-color: #fd9800 ;
+            }
+            .slider-info-phone-number {
+                display: flex;
+                justify-content: space-between;
+                width: 450px;
+                padding-top: 58px;
+                .slider-info-phone-number-icon {
+                    background-image: url("../../images/phone-icon.png");
+                    background-size: contain;
+                    height: 80px;
+                    width: 106px;
+                    background-repeat: no-repeat;
+                }
+                .slider-info-phone-number-text {
+                    width: 68%;
+                    .slider-info-phone-number-name {
+                        color: #fff;
+                        font-family: $font-barlow;
+                        font-size: 36px;
+                        font-weight: 300;
+                    }
+                    .slider-info-phone-number-number {
+                        color: #fff;
+                        font-family: $font-barlow;
+                        font-size: 45px;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+    }     
+}

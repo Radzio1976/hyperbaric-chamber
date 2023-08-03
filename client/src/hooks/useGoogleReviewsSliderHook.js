@@ -1,10 +1,8 @@
 import AppState from "./AppState";
-import googleReviews from "../data/googleReviews";
 
 const useGoogleReviewsSliderHook = () => {
-  const { googleReviews, googleReviewsForSlider, setGoogleReviewsForSlider } =
-    AppState();
-  const changeReviewsSlides = () => {
+  const { googleReviewsForSlider, setGoogleReviewsForSlider } = AppState();
+  const changeReviewsSlides = (googleReviews) => {
     setGoogleReviewsForSlider(googleReviews.slice(0, 3));
     let counter = 0;
     let interval = setInterval(() => {
@@ -16,7 +14,8 @@ const useGoogleReviewsSliderHook = () => {
       setGoogleReviewsForSlider(googleReviewsForSlider);
     }, 20000);
   };
-  const nextGoogleReviewsForSlider = () => {
+  const nextGoogleReviewsForSlider = (googleReviews) => {
+    console.log(googleReviews);
     let counter = googleReviewsForSlider[0].id + 1;
     counter++;
     if (counter + 3 > googleReviews.length) {
@@ -25,7 +24,7 @@ const useGoogleReviewsSliderHook = () => {
     let nextGoogleReviewsForSlider = googleReviews.slice(counter, counter + 3);
     setGoogleReviewsForSlider(nextGoogleReviewsForSlider);
   };
-  const prevGoogleReviewsForSlider = () => {
+  const prevGoogleReviewsForSlider = (googleReviews) => {
     let counter = googleReviewsForSlider[0].id;
     counter--;
     if (counter < 0) {

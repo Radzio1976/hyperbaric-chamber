@@ -14,25 +14,19 @@ const useInputChangeHook = () => {
   const inputNameChange = (e) => {
     setInputName(e.target.value);
   };
-
   const inputNameErrorChange = () => setInputName(inputNameError);
-
   const inputEmailChange = (e) => {
     setInputEmail(e.target.value);
   };
-
   const inputEmailErrorChange = () => setInputEmail(inputEmailError);
-
   const inputSubjectChange = (e) => {
     setInputSubject(e.target.value);
   };
-
   const inputSubjectErrorChange = () => setInputSubject(inputSubjectError);
 
   const inputTextChange = (e) => {
     setInputText(e.target.value);
   };
-
   const inputTextErrorChange = () => setInputText(inputTextError);
 
   return {

@@ -12,7 +12,7 @@ const PriceList = () => {
   }, []);
 
   return (
-    <div className="price-list-main-container" ref={priceListRef}>
+    <div className="price-list-section" ref={priceListRef}>
       <div className="price-list-width-container">
         <div className="price-list-title">
           <h2>Cennik</h2>

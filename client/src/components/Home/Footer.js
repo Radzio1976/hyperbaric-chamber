@@ -2,7 +2,7 @@ import Wave from "react-wavify";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <footer className="footer-section">
       <div className="footer-width-container">
         <p>
           <span className="footer-developed-by">Developed by</span>{" "}
@@ -22,7 +22,7 @@ const Footer = () => {
           </defs>
         </Wave>
       </div>
-    </div>
+    </footer>
   );
 };
 

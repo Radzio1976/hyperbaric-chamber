@@ -1,6 +1,5 @@
 import { createRef } from "react";
 import { createGlobalState } from "react-hooks-global-state";
-import googleReviews from "../data/googleReviews";
 
 const initialState = {
   sliderCounter: 0,
@@ -9,13 +8,14 @@ const initialState = {
   isBenefitsBoxVisible: true,
   isLatestReviewsBoxVisible: true,
   isContactBoxVisible: true,
+  homeRef: createRef(),
   aboutRef: createRef(),
   priceListRef: createRef(),
   benefitsRef: createRef(),
   reviewsRef: createRef(),
   contactRef: createRef(),
   googleReviewsStars: [1, 2, 3, 4, 5],
-  googleReviews: googleReviews(),
+  googleReviews: [],
   googleReviewsForSlider: [],
   inputName: "",
   inputNameError: "Pole imię musi zawierać conajmniej 5 znaków",
@@ -26,6 +26,7 @@ const initialState = {
   inputText: "",
   inputTextError: "Pole tekst musi zawierać conajmniej 20 znaków",
   sendEmailSuccess: false,
+  scrollDirection: null,
 };
 
 const { useGlobalState } = createGlobalState(initialState);
@@ -44,6 +45,7 @@ const AppState = () => {
   const [isContactBoxVisible, setIsContactBoxVisible] = useGlobalState(
     "isContactBoxVisible"
   );
+  const [homeRef, setHomeRef] = useGlobalState("homeRef");
   const [aboutRef, setAboutRef] = useGlobalState("aboutRef");
   const [priceListRef, setPriceListRef] = useGlobalState("priceListRef");
   const [benefitsRef, setBenefitsRef] = useGlobalState("benefitsRef");
@@ -65,6 +67,8 @@ const AppState = () => {
   const [inputTextError] = useGlobalState("inputTextError");
   const [sendEmailSuccess, setSendEmailSuccess] =
     useGlobalState("sendEmailSuccess");
+  const [scrollDirection, setScrollDirection] =
+    useGlobalState("scrollDirection");
 
   return {
     sliderCounter,
@@ -79,6 +83,8 @@ const AppState = () => {
     setIsLatestReviewsBoxVisible,
     isContactBoxVisible,
     setIsContactBoxVisible,
+    homeRef,
+    setHomeRef,
     aboutRef,
     setAboutRef,
     priceListRef,
@@ -109,6 +115,8 @@ const AppState = () => {
     inputTextError,
     sendEmailSuccess,
     setSendEmailSuccess,
+    scrollDirection,
+    setScrollDirection,
   };
 };
 

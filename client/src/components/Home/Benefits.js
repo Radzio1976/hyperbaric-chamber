@@ -13,7 +13,7 @@ const Benefits = () => {
   }, []);
 
   return (
-    <div className="benefits-container" ref={benefitsRef}>
+    <div className="benefits-section" ref={benefitsRef}>
       <div className="benevits-boxes">
         <div className="benefits-boxes-top">
           <div className="benefits-box">

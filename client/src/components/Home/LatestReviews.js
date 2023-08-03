@@ -7,9 +7,8 @@ import useGoToGoogleReviewHook from "../../hooks/useGoToGoogleReviewHook";
 import useGoogleReviewsSliderHook from "../../hooks/useGoogleReviewsSliderHook";
 import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScrollTo";
 
-import googleReviews from "../../data/googleReviews";
-
-const LatestReviews = () => {
+const LatestReviews = (props) => {
+  const googleReviews = props.googleReviews;
   const {
     googleReviewsStars,
     googleReviewsForSlider,
@@ -18,20 +17,16 @@ const LatestReviews = () => {
     reviewsRef,
   } = AppState();
   const { goToGoogleReview } = useGoToGoogleReviewHook();
-  const {
-    changeReviewsSlides,
-    nextGoogleReviewsForSlider,
-    prevGoogleReviewsForSlider,
-  } = useGoogleReviewsSliderHook();
+  const { nextGoogleReviewsForSlider, prevGoogleReviewsForSlider } =
+    useGoogleReviewsSliderHook();
   const { showElementWhenScrollTo } = useShowElementWhenToScrollTo();
 
   useEffect(() => {
-    changeReviewsSlides();
     showElementWhenScrollTo(reviewsRef, setIsLatestReviewsBoxVisible);
   }, []);
 
   return (
-    <div className="latest-reviews-container" ref={reviewsRef}>
+    <div className="latest-reviews-section" ref={reviewsRef}>
       <div className="latest-reviews-boxes">
         <div className="latest-reviews-boxes-title">
           <h2>Ostatnie opinie</h2>
@@ -89,13 +84,13 @@ const LatestReviews = () => {
         <div className="review-prev-and-next-arrows">
           <div
             onClick={() => {
-              prevGoogleReviewsForSlider();
+              prevGoogleReviewsForSlider(googleReviews);
             }}
             className="slider-prev-button"
           ></div>
           <div
             onClick={() => {
-              nextGoogleReviewsForSlider();
+              nextGoogleReviewsForSlider(googleReviews);
             }}
             className="slider-next-button"
           ></div>
