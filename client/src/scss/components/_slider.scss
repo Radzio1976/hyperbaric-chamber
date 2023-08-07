@@ -1,6 +1,7 @@
 .slider {
     height: 100vh;
     overflow: hidden;
+    background-color: #181842;
     .slider-prev-and-next-buttons-container {
         display: flex;
         justify-content: space-between;
@@ -11,10 +12,6 @@
         margin-right: 10px;
         position: absolute;
         z-index: 1;
-        // div {
-        //     display: flex;
-        //     align-items: center
-        // }
         .slider-prev-button {
             background-image: url("../../images/prev-button.png");
             background-size: contain;
@@ -39,15 +36,49 @@
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
+        background-position-x: 147px;
+        @media (max-width: 1550px) {
+            background-position-x: -40px;
+        }
+        @media (max-width: 1450px) {
+            background-position-x: 10px;
+        }
+        @media (max-width: 1350px) {
+            background-position-x: 0px;
+        }
+        @media (max-width: 1250px) {
+            background-position-x: -97px;
+        }
+        @media (max-width: 750px) {
+            background-position-x: -360px
+        }
+        @media (max-width: 650px) {
+            background-position-x: -360px
+        }
+        @media (max-width: 450px) {
+            background-position-x: -437px
+        }
         .slider-info {
             display: flex;
             flex-direction: column;
-            // align-items: center;
-            width: 100%;
-            // margin-top: 143px;
-            // margin-right: 270px;
+            width: 1280px;
             padding-top: 89px;
-            padding-left: 8%;
+            padding-left: 2%;
+            margin: 0 auto;
+            @media (max-width: 1450px) {
+                padding-left: 10%;
+            }
+            @media (max-width: 1350px) {
+                padding-left: 13%;
+            }
+            @media (max-width: 750px) {
+                overflow: auto;
+                padding-left: 0;
+            }
+            @media (max-width: 650px) {
+                overflow: auto;
+                padding-left: 0;
+            }
             .slider-info-komora {
                 font-family: $font-montserrat;
                 line-height: 35px;
@@ -56,6 +87,24 @@
                 text-transform: uppercase;
                 color: #fff;
                 font-weight: 100;
+                @media (max-width: 1250px) {
+                    font-size: 80px;
+                }
+                @media (max-width: 1150px) {
+                    font-size: 70px;
+                }
+                @media (max-width: 750px) {
+                    font-size: 60px;
+                    text-align: center;
+                }
+                @media (max-width: 650px) {
+                    font-size: 56px;
+                    text-align: center;
+                }
+                @media (max-width: 550px) {
+                    font-size: 54px;
+                    text-align: center;
+                }
             }
             .slider-info-hiperbaryczna {
                 font-family: $font-league-spartan;
@@ -66,6 +115,27 @@
                 text-transform: uppercase;
                 color: #fd9800;
                 font-weight: 100;
+                @media (max-width: 1250px) {
+                    font-size: 63px;
+                }
+                @media (max-width: 1150px) {
+                    font-size: 53px;
+                }
+                @media (max-width: 750px) {
+                    font-size: 43px;
+                    text-align: center;
+                    margin-top: 46px;
+                }
+                @media (max-width: 650px) {
+                    font-size: 39px;
+                    text-align: center;
+                    margin-top: 42px;
+                }
+                @media (max-width: 550px) {
+                    font-size: 37px;
+                    text-align: center;
+                    margin-top: 42px;
+                }
             }
             .slider-info-jelenia-gora {
                 font-family: $font-league-spartan;
@@ -75,6 +145,27 @@
                 text-transform: uppercase;
                 color: #fff;
                 font-weight: 100;
+                @media (max-width: 1250px) {
+                    font-size: 63px;
+                }
+                @media (max-width: 1150px) {
+                    font-size: 53px;
+                }
+                @media (max-width: 750px) {
+                    font-size: 43px;
+                    text-align: center;
+                    margin-top: 46px;
+                }
+                @media (max-width: 650px) {
+                    font-size: 39px;
+                    text-align: center;
+                    margin-top: 42px;
+                }
+                @media (max-width: 550px) {
+                    font-size: 37px;
+                    text-align: center;
+                    margin-top: 42px;
+                }
             }
             .slider-info-terapia-tlenowa {
                 font-family: $font-montserrat;
@@ -85,6 +176,24 @@
                 font-size: 58px;
                 font-style: italic;
                 color: #fff;
+                @media (max-width: 1250px) {
+                    font-size: 54px;
+                }
+                @media (max-width: 1150px) {
+                    font-size: 44px;
+                }
+                @media (max-width: 750px) {
+                    font-size: 38px;
+                    text-align: center;
+                }
+                @media (max-width: 650px) {
+                    font-size: 34px;
+                    text-align: center;
+                }
+                @media (max-width: 550px) {
+                    font-size: 32px;
+                    text-align: center;
+                }
             }
             .slider-info-zarezerwuj-wizyte {
                 font-family: $font-montserrat;
@@ -100,32 +209,101 @@
                 border: 1px solid #fd9800;
                 border-radius: 38px;
                 background-color: #fd9800 ;
+                @media (max-width: 1250px) {
+                    margin-top: 55px;
+                    padding-left: 18px;
+                    padding-right: 18px;
+                    line-height: 60px;
+                    font-size: 26px;
+                }
+                @media (max-width: 1150px) {
+                    margin-top: 90px;
+                }
+                @media (max-width: 750px) {
+                    margin: 0 auto;
+                    margin-top: 120px;
+                    line-height: 50px;
+                }
+                @media (max-width: 650px) {
+                    margin: 0 auto;
+                    margin-top: 120px;
+                    line-height: 50px;
+                }
             }
             .slider-info-phone-number {
                 display: flex;
                 justify-content: space-between;
                 width: 450px;
                 padding-top: 58px;
+                @media (max-width: 750px) {
+                    display: block;
+                    width: 100%;
+                }
+                @media (max-width: 650px) {
+                    display: block;
+                    width: 100%;
+                }
                 .slider-info-phone-number-icon {
                     background-image: url("../../images/phone-icon.png");
                     background-size: contain;
                     height: 80px;
                     width: 106px;
                     background-repeat: no-repeat;
+                    @media (max-width: 1150px) {
+                        width: 90px;
+                    }
+                    @media (max-width: 750px) {
+                        margin: 0 auto;
+                        width: 66px;
+                    }
+                    @media (max-width: 650px) {
+                        margin: 0 auto;
+                        width: 66px;
+                    }
                 }
                 .slider-info-phone-number-text {
                     width: 68%;
+                    @media (max-width: 750px) {
+                        margin: 0 auto;
+                    }
+                    @media (max-width: 650px) {
+                        margin: 0 auto;
+                    }
                     .slider-info-phone-number-name {
                         color: #fff;
                         font-family: $font-barlow;
                         font-size: 36px;
                         font-weight: 300;
+                        @media (max-width: 1150px) {
+                            font-size: 32px;
+                        }
+                        @media (max-width: 750px) {
+                            display: none;
+                        }
+                        @media (max-width: 650px) {
+                            display: none;
+                        }
                     }
                     .slider-info-phone-number-number {
                         color: #fff;
                         font-family: $font-barlow;
                         font-size: 45px;
                         letter-spacing: 2px;
+                        @media (max-width: 1150px) {
+                            font-size: 40px;
+                        }
+                        @media (max-width: 750px) {
+                            font-size: 40px;
+                            text-align: center;
+                        }
+                        @media (max-width: 650px) {
+                            font-size: 36px;
+                            text-align: center;
+                        }
+                        @media (max-width: 550px) {
+                            font-size: 34px;
+                            text-align: center;
+                        }
                     }
                 }
             }

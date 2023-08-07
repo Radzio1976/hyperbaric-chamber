@@ -22,7 +22,10 @@ const Header = () => {
       }`}
     >
       <div className="header-width-container">
-        <div className="logo-container"></div>
+        <div
+          className="logo-container"
+          onClick={() => scrollToSection(homeRef)}
+        ></div>
         <input id="menu-toggle" type="checkbox" />
         <label className="menu-button-container" htmlFor="menu-toggle">
           <div className="menu-button"></div>

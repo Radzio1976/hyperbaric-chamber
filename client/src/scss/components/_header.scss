@@ -27,9 +27,10 @@
 .logo-container {
   background-image: url("../../images/logo.png");
   background-size: contain;
-  height: 90%;
+  height: 80%;
   width: 109px;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .menu {
@@ -50,6 +51,7 @@
 
 .menu label {
   cursor: pointer;
+  letter-spacing: 0.1rem;
 }
 
 .menu-button-container {
@@ -114,16 +116,16 @@
     }
 }
 
-@media (max-width: 700px) {
-  .header-section {
-      height: 50px;
-  }
+@media (max-width: 850px) {
+  // .header-section {
+  //     height: 50px;
+  // }
   .menu-button-container {
     display: flex;
   }
   .menu {
     position: absolute;
-    top: 0;
+    top: 39px;
     margin-top: 50px;
     left: 0;
     flex-direction: column;
@@ -157,7 +159,44 @@
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
-}    
+  .menu-button,
+.menu-button::before,
+.menu-button::after {
+  height: 7px;
+  width: 50px;
+}
+
+.menu-button::before {
+  margin-top: -13px;
+}
+
+.menu-button::after {
+  margin-top: 13px;
+}
+}  
+
+@media (max-width: 550px) {
+  .header-section {
+      height: 50px;
+  }
+  .menu {
+    top: 0px;
+  }
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    height: 4px;
+    width: 30px;
+  }
+  
+  .menu-button::before {
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    margin-top: 8px;
+  }
+}
 
 .header-section.hide {
   top: -100px;

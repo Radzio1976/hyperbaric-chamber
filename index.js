@@ -92,3 +92,42 @@ app.listen(port, () => console.log(`Server listen at port: ${port}`));
 //   });
 // };
 // addReviewsToTable(reviews);
+
+// Dodawanie pojedyńczej opinii do bazy danych
+// const addReviewsToTable = () => {
+//   const dbmysql = mysql.createConnection({
+//     host: process.env.MYSQL_HOST,
+//     user: process.env.MYSQL_USER,
+//     port: process.env.MYSQL_PORT,
+//     password: process.env.MYSQL_PASSWORD,
+//     database: process.env.MYSQL_DATABASE,
+//   });
+
+//   dbmysql.connect((err) => {
+//     if (err) {
+//       throw err;
+//     }
+//     console.log("Połączono z bazą danych dbmysql");
+//   });
+
+//   const reviewData = {
+//     reviewId: 6,
+//     name: "Józef Zabrzański",
+//     starsQty: 5,
+//     reviewText: "Fantastyczne zabiegi i super opieka.",
+//     date: "Sierpień 3, 2023",
+//     reviewLink: "https://g.co/kgs/SFoL52",
+//     userAvatar:
+//       "https://lh3.googleusercontent.com/a/AAcHTtdDgyNQ1vjsEgX4EnQadrutrhY2wxUiFAF5mhEwXEbw=w60-h60-p-rp-mo-br100",
+//   };
+
+//   let sqlReviewData = "INSERT INTO reviews_table SET ?";
+
+//   dbmysql.query(sqlReviewData, reviewData, (err) => {
+//     if (err) {
+//       throw err;
+//     }
+//     console.log(`Pomyślnie dodano rekord o nazwie ${reviewData.name}`);
+//   });
+// };
+// addReviewsToTable();

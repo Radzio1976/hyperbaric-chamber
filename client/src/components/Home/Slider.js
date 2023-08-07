@@ -14,7 +14,7 @@ const Slider = () => {
   }, []);
   return (
     <div className="slider">
-      <SliderPrevAndNextButtons />
+      {/* <SliderPrevAndNextButtons /> */}
       {slides.map((slider, i) => {
         return i === sliderCounter ? slider() : null;
       })}
