@@ -37,16 +37,7 @@
         background-repeat: no-repeat;
         height: 100vh;
         background-position-x: 147px;
-        @media (max-width: 1550px) {
-            background-position-x: -40px;
-        }
-        @media (max-width: 1450px) {
-            background-position-x: 10px;
-        }
-        @media (max-width: 1350px) {
-            background-position-x: 0px;
-        }
-        @media (max-width: 1250px) {
+        @media (max-width: 1260px) {
             background-position-x: -97px;
         }
         @media (max-width: 750px) {
@@ -87,7 +78,7 @@
                 text-transform: uppercase;
                 color: #fff;
                 font-weight: 100;
-                @media (max-width: 1250px) {
+                @media (max-width: 1260px) {
                     font-size: 80px;
                 }
                 @media (max-width: 1150px) {
