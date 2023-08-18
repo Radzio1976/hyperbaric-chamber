@@ -31,6 +31,7 @@ const initialState = {
   currentSlug: "",
   benefits,
   currentBenefitData: {},
+  screenWidth: window.innerWidth,
 };
 
 const { useGlobalState } = createGlobalState(initialState);
@@ -77,6 +78,7 @@ const AppState = () => {
   const [benefits] = useGlobalState("benefits");
   const [currentBenefitData, setCurrentBenefitData] =
     useGlobalState("currentBenefitData");
+  const [screenWidth, setScreenWidth] = useGlobalState("screenWidth");
 
   return {
     sliderCounter,
@@ -130,6 +132,8 @@ const AppState = () => {
     benefits,
     currentBenefitData,
     setCurrentBenefitData,
+    screenWidth,
+    setScreenWidth,
   };
 };
 

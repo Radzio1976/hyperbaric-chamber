@@ -6,6 +6,7 @@ import AppState from "../../hooks/AppState";
 import useGoToGoogleReviewHook from "../../hooks/useGoToGoogleReviewHook";
 import useGoogleReviewsSliderHook from "../../hooks/useGoogleReviewsSliderHook";
 import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScrollTo";
+import useScreenWidthHook from "../../hooks/useScreenWidthHook";
 
 const LatestReviews = (props) => {
   const googleReviews = props.googleReviews;
@@ -20,6 +21,8 @@ const LatestReviews = (props) => {
   const { nextGoogleReviewsForSlider, prevGoogleReviewsForSlider } =
     useGoogleReviewsSliderHook();
   const { showElementWhenScrollTo } = useShowElementWhenToScrollTo();
+  const { GetScreenWidth } = useScreenWidthHook();
+  GetScreenWidth();
 
   useEffect(() => {
     showElementWhenScrollTo(reviewsRef, setIsLatestReviewsBoxVisible);
@@ -30,12 +33,6 @@ const LatestReviews = (props) => {
       <div className="latest-reviews-boxes">
         <div className="latest-reviews-boxes-title">
           <h2>Ostatnie opinie</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
         </div>
         <div className="latest-reviews-boxes-container">
           {googleReviewsForSlider.map((review, i) => {

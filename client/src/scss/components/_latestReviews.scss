@@ -1,21 +1,29 @@
 .latest-reviews-section {
-    height: 800px;
+    height: auto;
     padding-top: 55px;
+    padding-bottom: 55px;
     background-color: #42a0de;
     overflow: hidden;
     .latest-reviews-boxes {
-        width: 1250px;
+        max-width: 1260px;
         margin: 0 auto;
+        padding: 0 43px;
         .latest-reviews-boxes-title {
             text-align: center;
             padding-left: 20%;
             padding-right: 20%;
+            margin-bottom: 40px;
             h2 {
-                margin-bottom: 20px;
                 font-family: $font-montserrat;
-                font-size: 44px;
+                font-size: 34px;
                 font-weight: bold;
                 color: #fff;
+                @media (max-width: 750px) {
+                    font-size: 28px;
+                }
+                @media (max-width: 650px) {
+                    font-size: 28px;
+                }
             }
             p {
                 color: #fff;
@@ -28,17 +36,49 @@
             justify-content: space-between;
             height: 395px;
             margin-bottom: 50px;
+            @media (min-width: 901px) and (max-width: 950px) {
+                width: 720px;
+                margin: 0 auto;
+                margin-bottom: 50px;
+            }
             .review-box {
                 width: 32.5%;
                 padding: 35px;
                 background-color: #fff;
                 cursor: pointer;
+                @media (max-width: 950px) {
+                    width: 48%;
+                }
+                @media (max-width: 900px) {
+                    width: 48%;
+                }
+                @media (max-width: 750px) {
+                    width: 48%;
+                }
+                @media (max-width: 650px) {
+                    width: 60%;
+                    margin: 0 auto;
+                }
+                @media (max-width: 600px) {
+                    width: 70%;
+                    margin: 0 auto;
+                }
+                @media (max-width: 550px) {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+                @media (max-width: 500px) {
+                    width: 90%;
+                }
+                @media (max-width: 450px) {
+                    width: 100%;
+                }
                 .user-avatar-and-name {
                     display: flex;
                     font-family: $font-montserrat;
                     margin-bottom: 12px;
                     img {
-                        width: 55px;
+                        width: 17%;
                         margin-right: 25px;
                     }
                 }
