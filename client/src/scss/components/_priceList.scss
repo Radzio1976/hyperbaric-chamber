@@ -1,12 +1,16 @@
 .price-list-section {
-    height: 600px;
+    height: auto;
     background-color: #181842;
     padding-top: 90px;
     padding-bottom: 140px;
     overflow: hidden;
+    @media (max-width: 650px) {
+        padding-bottom: 95px;
+     }
     .price-list-width-container {
-        max-width: 1080px;
+        max-width: 1260px;
         margin: 0 auto;
+        padding: 0 43px;
         .price-list-title {
             display: flex;
             justify-content: center;
@@ -18,16 +22,44 @@
             font-size: 28px;
             color: white;
             margin-bottom: 35px;
+            @media (max-width: 850px) {
+               font-size: 25px;
+            }
         }
         .price-list-boxes-container {
             display: flex;
             justify-content: space-between;
             height: 250px;
+            @media (max-width: 650px) {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+             }
             .price-box {
                 background-color: white;
                 border: 3px solid #FD9800;
                 width: 27%;
                 padding-top: 25px;
+                @media (max-width: 850px) {
+                    width: 30%;
+                 }
+                 @media (max-width: 750px) {
+                    width: 31%;
+                 }
+                 @media (max-width: 650px) {
+                    width: 60%;
+                    margin: 0 auto;
+                    margin-bottom: 45px;
+                 }
+                 @media (max-width: 550px) {
+                    width: 65%;
+                 }
+                 @media (max-width: 450px) {
+                    width: 75%;
+                 }
+                 @media (max-width: 400px) {
+                    width: 90%;
+                 }
                 .price-box-price {
                     font-family: $font-montserrat;
                     text-transform: uppercase;

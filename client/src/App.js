@@ -2,13 +2,22 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Axios from "axios";
 import { useEffect } from "react";
 
+import Header from "./components/Header";
 import Home from "./components/Home/Home";
+import Benefit from "./components/Benefit";
+import Footer from "./components/Footer";
 
 import AppState from "./hooks/AppState";
 import useGoogleReviewsSliderHook from "./hooks/useGoogleReviewsSliderHook";
 
 const App = () => {
-  const { googleReviews, setGoogleReviews } = AppState();
+  const {
+    googleReviews,
+    setGoogleReviews,
+    currentSlug,
+    benefits,
+    currentBenefitData,
+  } = AppState();
   const { changeReviewsSlides } = useGoogleReviewsSliderHook();
   useEffect(() => {
     Axios.post("/getReviews")
@@ -20,16 +29,23 @@ const App = () => {
         console.log(err);
       });
   }, []);
+
   return (
     <div id="App">
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route
             path="/"
             exact
             element={<Home googleReviews={googleReviews} />}
           />
+          <Route
+            path="/benefits/:currentSlug"
+            element={<Benefit currentBenefitData={currentBenefitData} />}
+          />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

@@ -1,5 +1,6 @@
 import { createRef } from "react";
 import { createGlobalState } from "react-hooks-global-state";
+import benefits from "../data/benefits";
 
 const initialState = {
   sliderCounter: 0,
@@ -27,6 +28,9 @@ const initialState = {
   inputTextError: "Pole tekst musi zawierać conajmniej 20 znaków",
   sendEmailSuccess: false,
   scrollDirection: null,
+  currentSlug: "",
+  benefits,
+  currentBenefitData: {},
 };
 
 const { useGlobalState } = createGlobalState(initialState);
@@ -69,6 +73,10 @@ const AppState = () => {
     useGlobalState("sendEmailSuccess");
   const [scrollDirection, setScrollDirection] =
     useGlobalState("scrollDirection");
+  const [currentSlug, setCurrentSlug] = useGlobalState("currentSlug");
+  const [benefits] = useGlobalState("benefits");
+  const [currentBenefitData, setCurrentBenefitData] =
+    useGlobalState("currentBenefitData");
 
   return {
     sliderCounter,
@@ -117,6 +125,11 @@ const AppState = () => {
     setSendEmailSuccess,
     scrollDirection,
     setScrollDirection,
+    currentSlug,
+    setCurrentSlug,
+    benefits,
+    currentBenefitData,
+    setCurrentBenefitData,
   };
 };
 

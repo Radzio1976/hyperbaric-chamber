@@ -1,8 +1,16 @@
+import { useLocation } from "react-router-dom";
 import Wave from "react-wavify";
 
 const Footer = () => {
+  const location = useLocation();
   return (
-    <footer className="footer-section">
+    <footer
+      className={`footer-section ${
+        location.pathname.includes("benefits")
+          ? "background-white"
+          : "background-grey"
+      }`}
+    >
       <div className="footer-width-container">
         <p>
           <span className="footer-developed-by">Developed by</span>{" "}
