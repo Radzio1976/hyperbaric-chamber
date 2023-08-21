@@ -6,7 +6,6 @@ import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScroll
 const About = () => {
   const { isAboutBoxVisible, setIsAboutBoxVisible, aboutRef } = AppState();
   const { showElementWhenScrollTo } = useShowElementWhenToScrollTo();
-
   useEffect(() => {
     showElementWhenScrollTo(aboutRef, setIsAboutBoxVisible);
   }, []);

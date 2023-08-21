@@ -36,6 +36,7 @@ const Contact = () => {
   useEffect(() => {
     showElementWhenScrollTo(contactRef, setIsContactBoxVisible);
   }, []);
+
   return (
     <div className="contact-section" ref={contactRef}>
       {sendEmailSuccess ? (

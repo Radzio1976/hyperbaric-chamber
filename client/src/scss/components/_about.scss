@@ -40,6 +40,10 @@
                 width: 345px;
                 margin: 0 auto;
             }
+            @media (max-width: 500px) {
+                height: 252px;
+                width: 252px;
+            }
         }
         .about-text {
             width: 750px;

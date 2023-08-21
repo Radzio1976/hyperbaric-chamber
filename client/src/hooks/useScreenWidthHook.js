@@ -9,7 +9,6 @@ const useScreenWidthHook = () => {
     useEffect(() => {
       window.addEventListener("resize", () => {
         setScreenWidth(window.innerWidth);
-        console.log(window.innerWidth);
       });
     }, []);
   };

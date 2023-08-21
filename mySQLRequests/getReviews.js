@@ -24,7 +24,7 @@ module.exports = function getReviews(req, res) {
       for (let i = 0; i < reversedReviews.length; i++) {
         reversedReviews[i].id = i;
       }
-      console.log(reversedReviews);
+      // console.log(reversedReviews);
       res.send({ info: "Wszystkie opinie", reversedReviews });
     });
   });

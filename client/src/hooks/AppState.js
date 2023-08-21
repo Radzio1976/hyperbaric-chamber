@@ -4,11 +4,11 @@ import benefits from "../data/benefits";
 
 const initialState = {
   sliderCounter: 0,
-  isPriceBoxVisible: true,
-  isAboutBoxVisible: true,
-  isBenefitsBoxVisible: true,
-  isLatestReviewsBoxVisible: true,
-  isContactBoxVisible: true,
+  isPriceBoxVisible: false,
+  isAboutBoxVisible: false,
+  isBenefitsBoxVisible: false,
+  isLatestReviewsBoxVisible: false,
+  isContactBoxVisible: false,
   homeRef: createRef(),
   aboutRef: createRef(),
   priceListRef: createRef(),
