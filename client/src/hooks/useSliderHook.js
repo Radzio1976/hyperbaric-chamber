@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import slides from "../components/Home/Slides";
 import AppState from "./AppState";
 

@@ -1,7 +1,6 @@
 import image1 from "../../images/Komora.png";
 import image2 from "../../images/slider-2.jpg";
 import image3 from "../../images/slider-3.jpeg";
-import SliderPrevAndNextButtons from "./SliderPrevAndNextButtons";
 
 const slider1 = () => {
   return (
@@ -60,10 +59,4 @@ const slider3 = () => {
     ></div>
   );
 };
-// export default [image1, image2, image3];
 export default [slider1, slider2, slider3];
-
-/*        <h1 className="animate__animated animate__lightSpeedInRight animate__delay-5s">
-          Komora hiperbaryczna
-        </h1>
-        */

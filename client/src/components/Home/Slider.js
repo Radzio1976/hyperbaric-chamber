@@ -1,23 +1,8 @@
-import { useEffect } from "react";
 import image1 from "../../images/Komora.png";
-import slides from "./Slides";
-import AppState from "../../hooks/AppState";
-import useSliderHook from "../../hooks/useSliderHook";
-import SliderPrevAndNextButtons from "./SliderPrevAndNextButtons";
 
 const Slider = () => {
-  const { sliderCounter, setSliderCounter } = AppState();
-  const { getNewSlide } = useSliderHook();
-
-  useEffect(() => {
-    // getNewSlide();
-  }, []);
   return (
     <div className="slider">
-      {/* <SliderPrevAndNextButtons /> */}
-      {/* {slides.map((slider, i) => {
-        return i === sliderCounter ? slider() : null;
-      })} */}
       <div
         className="animate__animated animate__fadeInLeft slide"
         style={{

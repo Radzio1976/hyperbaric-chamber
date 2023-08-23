@@ -45,9 +45,6 @@ const Contact = () => {
         </div>
       ) : (
         <>
-          <div className="contact-title">
-            <h2>Kontakt</h2>
-          </div>
           <div className="contact-width-container">
             <div
               className="map-and-address-container animate__animated animate__lightSpeedInLeft animate__delay-1s"
@@ -55,6 +52,9 @@ const Contact = () => {
                 display: isContactBoxVisible ? "block" : "none",
               }}
             >
+              <div className="map-title-container">
+                <h2>Jak nas znaleźć</h2>
+              </div>
               <div className="map-container">
                 <Iframe
                   url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.144743222356!2d15.677274876915746!3d50.86552005739106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470edd12f8fe6f1b%3A0x12f2b1950274ba62!2sPrema%20Marzena%20Rosiak%20-%20Komora%20hiperbaryczna!5e0!3m2!1spl!2spl!4v1689926612088!5m2!1spl!2spl"
@@ -86,6 +86,9 @@ const Contact = () => {
                 display: isContactBoxVisible ? "block" : "none",
               }}
             >
+              <div className="contact-form-title-container">
+                <h2>Napisz do nas</h2>
+              </div>
               <div className="contact-form-box">
                 <form onSubmit={(e) => sendEmail(e)}>
                   <input

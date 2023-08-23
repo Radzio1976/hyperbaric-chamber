@@ -8,10 +8,12 @@
         max-width: 1260px;
         margin: 0 auto;
         padding: 0 43px;
+        @media (max-width: 605px) {
+            padding: 0 0;
+        }
         .benefits-boxes-first-title {
             display: none;
             font-family: $font-montserrat;
-            // padding-top: 45px;
             padding-bottom: 90px;
             text-align: center;
             @media (max-width: 950px) {

@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import AppState from "../../hooks/AppState";
-import { useEffect } from "react";
 
 const Benefit = (props) => {
   const location = useLocation();

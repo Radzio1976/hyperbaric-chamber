@@ -11,6 +11,9 @@
         max-width: 1260px;
         margin: 0 auto;
         padding: 0 43px;
+        @media (max-width: 450px) {
+            padding: 0 0;
+         }
         .price-list-title {
             display: flex;
             justify-content: center;
