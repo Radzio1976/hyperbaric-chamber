@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2a74e395.css",
+    "main.js": "/static/js/main.32aa36db.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/marzena-image.png": "/static/media/marzena-image.db62544e6f6832c3f563.png",
+    "static/media/Komora.png": "/static/media/Komora.034aa91756fb2a8dd752.png",
+    "static/media/logo.png": "/static/media/logo.fdae36b9e1b61046ade1.png",
+    "static/media/phone-icon.png": "/static/media/phone-icon.cbe63a696ffc694f1c05.png",
+    "static/media/googleStar.png": "/static/media/googleStar.a58381d36f64127249c0.png",
+    "static/media/neurologia.png": "/static/media/neurologia.3e3ba5857d51fa2d5b36.png",
+    "static/media/dermatologia.png": "/static/media/dermatologia.134db5a0e3bcb3cdffff.png",
+    "static/media/onkologia.png": "/static/media/onkologia.83b929deb4086719166f.png",
+    "index.html": "/index.html",
+    "main.2a74e395.css.map": "/static/css/main.2a74e395.css.map",
+    "main.32aa36db.js.map": "/static/js/main.32aa36db.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a74e395.css",
+    "static/js/main.32aa36db.js"
+  ]
+}
