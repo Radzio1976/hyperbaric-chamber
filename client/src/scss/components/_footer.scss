@@ -7,12 +7,24 @@
             top: 59%;
             left: 50%;
             transform: translate(-50%, -50%);
+            @media (max-width: 550px) {
+                display: flex;
+                flex-direction: column;
+            }
         }
         .footer-developed-by {
             color: #42a0de;
+            @media (max-width: 550px) {
+                align-self: center;
+                text-align: center;
+            }
         }
         .footer-developer-name {
             color: #fff;
+            @media (max-width: 550px) {
+                align-self: center;
+                text-align: center;
+            }
         }
     }
 }

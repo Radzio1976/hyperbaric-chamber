@@ -90,11 +90,12 @@
                 }
                 @media (max-width: 650px) {
                     font-size: 56px;
-                    text-align: center;
                 }
                 @media (max-width: 550px) {
                     font-size: 54px;
-                    text-align: center;
+                }
+                @media (max-width: 400px) {
+                    font-size: 48px;
                 }
             }
             .slider-info-hiperbaryczna {
@@ -127,6 +128,9 @@
                     text-align: center;
                     margin-top: 42px;
                 }
+                @media (max-width: 400px) {
+                    font-size: 31px;
+                }
             }
             .slider-info-jelenia-gora {
                 font-family: $font-league-spartan;
@@ -154,8 +158,9 @@
                 }
                 @media (max-width: 550px) {
                     font-size: 37px;
-                    text-align: center;
-                    margin-top: 42px;
+                }
+                @media (max-width: 400px) {
+                    font-size: 31px;
                 }
             }
             .slider-info-terapia-tlenowa {
@@ -179,11 +184,13 @@
                 }
                 @media (max-width: 650px) {
                     font-size: 34px;
-                    text-align: center;
                 }
                 @media (max-width: 550px) {
                     font-size: 32px;
-                    text-align: center;
+                }
+                @media (max-width: 400px) {
+                    font-size: 30px;
+                    margin-top: 45px;
                 }
             }
             .slider-info-zarezerwuj-wizyte {
@@ -214,6 +221,10 @@
                     margin: 0 auto;
                     margin-top: 90px;
                     line-height: 50px;
+                }
+                @media (max-width: 400px) {
+                    font-size: 22px;
+                    margin-top: 65px;
                 }
             }
             .slider-info-phone-number {
