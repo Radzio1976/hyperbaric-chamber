@@ -10,6 +10,8 @@ const getReviews = require("./mySQLRequests/getReviews");
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+
 app.get("*", function (_, res) {
   res.sendFile(
     path.join(__dirname, "./client/build", "index.html"),
@@ -21,7 +23,6 @@ app.get("*", function (_, res) {
   );
 });
 
-app.use(express.static(path.join(__dirname, "./client/build")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
