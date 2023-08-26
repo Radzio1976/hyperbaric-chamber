@@ -10,6 +10,10 @@
             max-width: 1260px;
             margin: 0 auto;
             padding: 0 43px;
+            @media (max-width: 400px) {
+                padding: 0 0;
+                width: 90%;
+            }
             .benefit-icon {
                 width: 140px;
                 margin: 53px 20px 20px 0;
