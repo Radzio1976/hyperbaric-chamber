@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a9767225.css",
-    "main.js": "/static/js/main.32aa36db.js",
+    "main.js": "/static/js/main.9fc81087.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/marzena-image.png": "/static/media/marzena-image.db62544e6f6832c3f563.png",
     "static/media/Komora.png": "/static/media/Komora.034aa91756fb2a8dd752.png",
@@ -13,11 +13,11 @@
     "static/media/onkologia.png": "/static/media/onkologia.83b929deb4086719166f.png",
     "index.html": "/index.html",
     "main.a9767225.css.map": "/static/css/main.a9767225.css.map",
-    "main.32aa36db.js.map": "/static/js/main.32aa36db.js.map",
+    "main.9fc81087.js.map": "/static/js/main.9fc81087.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a9767225.css",
-    "static/js/main.32aa36db.js"
+    "static/js/main.9fc81087.js"
   ]
 }
