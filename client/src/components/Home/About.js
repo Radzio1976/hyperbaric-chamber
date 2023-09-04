@@ -15,17 +15,19 @@ const About = () => {
       <div className="about-container">
         <div className="about-image-container">
           <div
-            className="animate__animated animate__lightSpeedInRight animate__delay-1s about-image"
-            style={{
-              display: isAboutBoxVisible ? "block" : "none",
-            }}
+            className={`${
+              isAboutBoxVisible
+                ? "animate__animated animate__lightSpeedInRight animate__delay-1s"
+                : ""
+            } about-image`}
           ></div>
         </div>
         <div
-          className="animate__animated animate__lightSpeedInRight animate__delay-2s about-text"
-          style={{
-            display: isAboutBoxVisible ? "block" : "none",
-          }}
+          className={`${
+            isAboutBoxVisible
+              ? "animate__animated animate__lightSpeedInRight animate__delay-2s"
+              : ""
+          } about-text`}
         >
           <h1>Kim jestem</h1>
           <p>

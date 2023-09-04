@@ -9,6 +9,7 @@ const initialState = {
   isBenefitsBoxVisible: false,
   isLatestReviewsBoxVisible: false,
   isContactBoxVisible: false,
+  appRef: createRef(),
   homeRef: createRef(),
   aboutRef: createRef(),
   priceListRef: createRef(),
@@ -50,6 +51,7 @@ const AppState = () => {
   const [isContactBoxVisible, setIsContactBoxVisible] = useGlobalState(
     "isContactBoxVisible"
   );
+  const [appRef, setAppRef] = useGlobalState("appRef");
   const [homeRef, setHomeRef] = useGlobalState("homeRef");
   const [aboutRef, setAboutRef] = useGlobalState("aboutRef");
   const [priceListRef, setPriceListRef] = useGlobalState("priceListRef");
@@ -93,6 +95,8 @@ const AppState = () => {
     setIsLatestReviewsBoxVisible,
     isContactBoxVisible,
     setIsContactBoxVisible,
+    appRef,
+    setAppRef,
     homeRef,
     setHomeRef,
     aboutRef,

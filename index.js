@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.post("/hyperbaric-chamber/getReviews", (req, res) => {
+app.post("/getReviews", (req, res) => {
   getReviews(req, res);
 });
 

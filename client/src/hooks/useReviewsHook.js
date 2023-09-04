@@ -5,7 +5,7 @@ import AppState from "./AppState";
 const useReviewsHook = () => {
   const { setGoogleReviews } = AppState();
   const getReviewsFromDataBase = () => {
-    Axios.post("/hyperbaric-chamber/getReviews")
+    Axios.post("/getReviews")
       .then((res) => {
         setGoogleReviews(res.data.reversedReviews);
       })

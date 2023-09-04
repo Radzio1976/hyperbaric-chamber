@@ -6,7 +6,7 @@ import useScrollDirectionHook from "../../hooks/useScrollDirectionHook";
 
 const Header = () => {
   const {
-    homeRef,
+    appRef,
     aboutRef,
     priceListRef,
     benefitsRef,
@@ -24,14 +24,14 @@ const Header = () => {
       <div className="header-width-container">
         <div
           className="logo-container"
-          onClick={() => scrollToSection(homeRef)}
+          onClick={() => scrollToSection(appRef)}
         ></div>
         <input id="menu-toggle" type="checkbox" />
         <label className="menu-button-container" htmlFor="menu-toggle">
           <div className="menu-button"></div>
         </label>
         <ul className="menu">
-          <li onClick={() => scrollToSection(homeRef)}>
+          <li onClick={() => scrollToSection(appRef)}>
             <label htmlFor="menu-toggle">Home</label>
           </li>
           <li onClick={() => scrollToSection(aboutRef)}>

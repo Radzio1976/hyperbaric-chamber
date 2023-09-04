@@ -47,10 +47,11 @@ const Contact = () => {
         <>
           <div className="contact-width-container">
             <div
-              className="map-and-address-container animate__animated animate__lightSpeedInLeft animate__delay-1s"
-              style={{
-                display: isContactBoxVisible ? "block" : "none",
-              }}
+              className={`map-and-address-container ${
+                isContactBoxVisible
+                  ? "animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                  : ""
+              }`}
             >
               <div className="map-title-container">
                 <h2>Jak nas znaleźć</h2>
@@ -81,10 +82,11 @@ const Contact = () => {
               </div>
             </div>
             <div
-              className="contact-form-container animate__animated animate__lightSpeedInRight animate__delay-1s"
-              style={{
-                display: isContactBoxVisible ? "block" : "none",
-              }}
+              className={`contact-form-container ${
+                isContactBoxVisible
+                  ? "animate__animated animate__lightSpeedInRight animate__delay-1s"
+                  : ""
+              }`}
             >
               <div className="contact-form-title-container">
                 <h2>Napisz do nas</h2>

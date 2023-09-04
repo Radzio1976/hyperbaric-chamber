@@ -40,10 +40,11 @@ const LatestReviews = (props) => {
               <div
                 onClick={() => goToGoogleReview(review.reviewLink)}
                 key={review.id}
-                className="review-box animate__animated animate__lightSpeedInRight animate__delay-1s"
-                style={{
-                  display: isLatestReviewsBoxVisible ? "block" : "none",
-                }}
+                className={`review-box ${
+                  isLatestReviewsBoxVisible
+                    ? "animate__animated animate__lightSpeedInRight animate__delay-1s"
+                    : ""
+                }`}
               >
                 <div className="user-avatar-and-name">
                   <img src={review.userAvatar} alt={review.name}></img>

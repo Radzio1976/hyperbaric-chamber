@@ -34,10 +34,13 @@ const Benefits = () => {
                 style={{ display: benefit.id < 4 ? "block" : "none" }}
               >
                 <div
-                  className={`benefits-box-icon benefits-box-icon-${benefit.name} animate__animated animate__lightSpeedInLeft animate__delay-1s`}
-                  style={{
-                    display: isBenefitsBoxVisible ? "block" : "none",
-                  }}
+                  className={`benefits-box-icon benefits-box-icon-${
+                    benefit.name
+                  } ${
+                    isBenefitsBoxVisible
+                      ? "animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                      : ""
+                  }`}
                 ></div>
                 <div className="benefits-box-text-container">
                   <h3>{benefit.name.replace("-", " ")}</h3>
@@ -64,10 +67,13 @@ const Benefits = () => {
                 style={{ display: benefit.id > 3 ? "block" : "none" }}
               >
                 <div
-                  className={`benefits-box-icon benefits-box-icon-${benefit.name} animate__animated animate__lightSpeedInLeft animate__delay-1s`}
-                  style={{
-                    display: isBenefitsBoxVisible ? "block" : "none",
-                  }}
+                  className={`benefits-box-icon benefits-box-icon-${
+                    benefit.name
+                  } ${
+                    isBenefitsBoxVisible
+                      ? "animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                      : ""
+                  }`}
                 ></div>
                 <div className="benefits-box-text-container">
                   <h3>{benefit.name.replace("-", " ")}</h3>

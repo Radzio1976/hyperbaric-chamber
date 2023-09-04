@@ -17,6 +17,7 @@ const App = () => {
     currentSlug,
     benefits,
     currentBenefitData,
+    appRef,
   } = AppState();
   const { changeReviewsSlides } = useGoogleReviewsSliderHook();
   useEffect(() => {
@@ -31,7 +32,7 @@ const App = () => {
   }, []);
 
   return (
-    <div id="App">
+    <div id="App" ref={appRef}>
       <BrowserRouter>
         <Header />
         <Routes>
