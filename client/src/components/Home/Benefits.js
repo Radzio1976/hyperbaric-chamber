@@ -44,7 +44,7 @@ const Benefits = () => {
                 ></div>
                 <div className="benefits-box-text-container">
                   <h3>{benefit.name.replace("-", " ")}</h3>
-                  <p>{benefit.lessText}</p>
+                  <p>{benefit.moreText}</p>
                 </div>
                 <button>
                   <Link onClick={scrollToTop} to={`/benefits/${benefit.name}`}>
@@ -77,7 +77,7 @@ const Benefits = () => {
                 ></div>
                 <div className="benefits-box-text-container">
                   <h3>{benefit.name.replace("-", " ")}</h3>
-                  <p>{benefit.lessText}</p>
+                  <p>{benefit.moreText}</p>
                 </div>
                 <button>
                   <Link onClick={scrollToTop} to={`/benefits/${benefit.name}`}>
