@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.0050225e.css",
+    "main.css": "/static/css/main.383e89b7.css",
     "main.js": "/static/js/main.3d25cac9.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/marzena-image.png": "/static/media/marzena-image.db62544e6f6832c3f563.png",
@@ -12,12 +12,12 @@
     "static/media/dermatologia.png": "/static/media/dermatologia.134db5a0e3bcb3cdffff.png",
     "static/media/onkologia.png": "/static/media/onkologia.83b929deb4086719166f.png",
     "index.html": "/index.html",
-    "main.0050225e.css.map": "/static/css/main.0050225e.css.map",
+    "main.383e89b7.css.map": "/static/css/main.383e89b7.css.map",
     "main.3d25cac9.js.map": "/static/js/main.3d25cac9.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0050225e.css",
+    "static/css/main.383e89b7.css",
     "static/js/main.3d25cac9.js"
   ]
 }

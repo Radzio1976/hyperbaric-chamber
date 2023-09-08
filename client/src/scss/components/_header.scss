@@ -130,6 +130,10 @@
     justify-content: center;
     align-items: center;
   }
+  .menu label {
+    width: 100%;
+    text-align: center;
+  }
   #menu-toggle ~ .menu li {
     height: 0;
     margin: 0;
@@ -198,4 +202,3 @@
 .header-section.hide {
   top: -100px;
 }
-
