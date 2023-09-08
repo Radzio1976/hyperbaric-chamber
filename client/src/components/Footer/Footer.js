@@ -19,7 +19,9 @@ const Footer = () => {
         <Wave
           fill="url(#gradient)"
           style={{
+            display: "block",
             height: "150px",
+            overflow: "hidden",
           }}
         >
           <defs>
