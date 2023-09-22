@@ -14,6 +14,7 @@ const LatestReviews = (props) => {
     googleReviewsStars,
     googleReviewsForSlider,
     addGoogleReviewURL,
+    googleReviewsSiteURL,
     isLatestReviewsBoxVisible,
     setIsLatestReviewsBoxVisible,
     reviewsRef,
@@ -39,7 +40,7 @@ const LatestReviews = (props) => {
           {googleReviewsForSlider.map((review, i) => {
             return (
               <div
-                onClick={() => goToGoogleReview(review.reviewLink)}
+                onClick={() => goToGoogleReview(googleReviewsSiteURL)}
                 key={review.id}
                 className={`review-box ${
                   isLatestReviewsBoxVisible

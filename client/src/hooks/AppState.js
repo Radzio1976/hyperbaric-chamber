@@ -20,6 +20,8 @@ const initialState = {
   googleReviews: [],
   googleReviewsForSlider: [],
   addGoogleReviewURL: "https://g.page/r/CWK6dAKVsfISEBM/review",
+  googleReviewsSiteURL:
+    "https://search.google.com/local/writereview?placeid=ChIJG2_--BLdDkcRYrp0ApWx8hI",
   inputName: "",
   inputNameError: "Pole imię musi zawierać conajmniej 5 znaków",
   inputEmail: "",
@@ -66,6 +68,7 @@ const AppState = () => {
     "googleReviewsForSlider"
   );
   const [addGoogleReviewURL] = useGlobalState("addGoogleReviewURL");
+  const [googleReviewsSiteURL] = useGlobalState("googleReviewsSiteURL");
   const [inputName, setInputName] = useGlobalState("inputName");
   const [inputNameError] = useGlobalState("inputNameError");
   const [inputEmail, setInputEmail] = useGlobalState("inputEmail");
@@ -118,6 +121,7 @@ const AppState = () => {
     googleReviewsForSlider,
     setGoogleReviewsForSlider,
     addGoogleReviewURL,
+    googleReviewsSiteURL,
     inputName,
     setInputName,
     inputNameError,
