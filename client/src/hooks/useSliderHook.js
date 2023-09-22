@@ -11,7 +11,7 @@ const useSliderHook = () => {
       if (count === slides.length) {
         count = 0;
       }
-    }, 8000);
+    }, 20000);
   };
 
   const getPrevSlide = () => {
