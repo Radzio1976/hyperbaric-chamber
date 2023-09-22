@@ -13,6 +13,7 @@ const LatestReviews = (props) => {
   const {
     googleReviewsStars,
     googleReviewsForSlider,
+    addGoogleReviewURL,
     isLatestReviewsBoxVisible,
     setIsLatestReviewsBoxVisible,
     reviewsRef,
@@ -92,6 +93,13 @@ const LatestReviews = (props) => {
             }}
             className="slider-next-button"
           ></div>
+        </div>
+        <div className="latest-reviews-add-review-button-container">
+          <div>
+            <p onClick={() => goToGoogleReview(addGoogleReviewURL)}>
+              Dodaj opinię
+            </p>
+          </div>
         </div>
       </div>
     </div>
