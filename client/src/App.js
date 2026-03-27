@@ -11,14 +11,8 @@ import AppState from "./hooks/AppState";
 import useGoogleReviewsSliderHook from "./hooks/useGoogleReviewsSliderHook";
 
 const App = () => {
-  const {
-    googleReviews,
-    setGoogleReviews,
-    currentSlug,
-    benefits,
-    currentBenefitData,
-    appRef,
-  } = AppState();
+  const { googleReviews, setGoogleReviews, currentBenefitData, appRef } =
+    AppState();
   const { changeReviewsSlides } = useGoogleReviewsSliderHook();
   useEffect(() => {
     Axios.post("/getReviews")

@@ -17,7 +17,7 @@ module.exports = function getReviews(req, res) {
 
     let sqlReviews = "SELECT * FROM reviews_table";
     dbmysql.query(sqlReviews, (err, results) => {
-      if (err) throw error;
+      if (err) throw err;
       let reviews = results;
       let reversedReviews = reviews.reverse();
 
