@@ -1,61 +1,62 @@
+import { useEffect, useState } from "react";
 import AppState from "./AppState";
 
-const useGoogleReviewsSliderHook = () => {
-  const { googleReviewsForSlider, setGoogleReviewsForSlider, screenWidth } =
-    AppState();
-  const changeReviewsSlides = (googleReviews) => {
-    let reviewsQty =
-      screenWidth <= 650 ? 1 : screenWidth > 650 && screenWidth <= 950 ? 2 : 3;
-    setGoogleReviewsForSlider(googleReviews.slice(0, reviewsQty));
-    let counter = 0;
-    let interval = setInterval(() => {
-      counter++;
-      counter + reviewsQty > googleReviews.length
-        ? (counter = 0)
-        : (counter = counter);
-      let googleReviewsForSlider = googleReviews.slice(
-        counter,
-        counter + reviewsQty
-      );
-      setGoogleReviewsForSlider(googleReviewsForSlider);
-    }, 20000);
-  };
-  const nextGoogleReviewsForSlider = (googleReviews) => {
-    let reviewsQty =
-      screenWidth <= 650 ? 1 : screenWidth > 650 && screenWidth <= 950 ? 2 : 3;
-    let counter = googleReviewsForSlider[0].id + 1;
-    counter++;
-    counter + reviewsQty > googleReviews.length
-      ? (counter = 0)
-      : (counter = counter);
-    let nextGoogleReviewsForSlider = googleReviews.slice(
-      counter,
-      counter + reviewsQty
-    );
-    setGoogleReviewsForSlider(nextGoogleReviewsForSlider);
-  };
-  const prevGoogleReviewsForSlider = (googleReviews) => {
-    let reviewsQty =
-      screenWidth <= 650 ? 1 : screenWidth > 650 && screenWidth <= 950 ? 2 : 3;
-    let counter = googleReviewsForSlider[0].id;
-    counter--;
-    // if (counter < 0) {
-    counter < 0
-      ? (counter = googleReviews.length - reviewsQty)
-      : (counter = counter);
-    // }
-    let nextGoogleReviewsForSlider = googleReviews.slice(
-      counter,
-      counter + reviewsQty
-    );
-    setGoogleReviewsForSlider(nextGoogleReviewsForSlider);
+const useGoogleReviewsSliderHook = (googleReviews) => {
+  const { screenWidth } = AppState();
+  const [googleReviewsForSlider, setGoogleReviewsForSlider] = useState([]);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const getReviewsQty = () => {
+    if (screenWidth <= 650) return 1;
+    if (screenWidth <= 950) return 2;
+    return 3;
   };
 
-  return {
-    changeReviewsSlides,
-    nextGoogleReviewsForSlider,
-    prevGoogleReviewsForSlider,
+  const updateSlider = (index) => {
+    const reviewsQty = getReviewsQty();
+    const sliced = googleReviews.slice(index, index + reviewsQty);
+    setGoogleReviewsForSlider(sliced);
   };
+
+  // 🔥 AUTO SLIDE
+  useEffect(() => {
+    if (!googleReviews || googleReviews.length === 0) return;
+
+    updateSlider(currentIndex);
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => {
+        const reviewsQty = getReviewsQty();
+        const nextIndex =
+          prev + reviewsQty >= googleReviews.length ? 0 : prev + 1;
+        return nextIndex;
+      });
+    }, 20000);
+
+    return () => clearInterval(interval); // ✅ KLUCZOWE
+  }, [googleReviews, screenWidth]);
+
+  // 🔥 UPDATE przy zmianie indexu
+  useEffect(() => {
+    updateSlider(currentIndex);
+  }, [currentIndex]);
+
+  // 🔥 NEXT
+  const next = () => {
+    setCurrentIndex((prev) =>
+      prev + 1 >= googleReviews.length ? 0 : prev + 1,
+    );
+  };
+
+  // 🔥 PREV
+  const prev = () => {
+    setCurrentIndex((prev) =>
+      prev - 1 < 0 ? googleReviews.length - 1 : prev - 1,
+    );
+  };
+
+  return { next, prev, googleReviewsForSlider };
 };
 
 export default useGoogleReviewsSliderHook;

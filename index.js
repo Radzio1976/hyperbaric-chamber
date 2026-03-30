@@ -9,30 +9,32 @@ const sendEmail = require("./sendEmail/sendEmail");
 const getReviews = require("./mySQLRequests/getReviews");
 
 const app = express();
+app.use(cors());
+app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+
+app.get("/getReviews", (req, res) => {
+  getReviews(req, res);
+});
+
+app.post("/sendEmail", (req, res) => {
+  sendEmail(req, res);
+});
 
 app.get("*", function (_, res) {
   res.sendFile(
     path.join(__dirname, "./client/build", "index.html"),
     function (err) {
       if (err) {
-        res.status(500), send(err);
+        (res.status(500), send(err));
       }
-    }
+    },
   );
-});
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
-
-app.post("/getReviews", (req, res) => {
-  getReviews(req, res);
-});
-
-app.post("/sendEmail", (req, res) => {
-  sendEmail(req, res);
 });
 
 app.listen(port, () => console.log(`Server listen at port: ${port}`));

@@ -1,19 +1,23 @@
 import { useEffect } from "react";
-
 import AppState from "./AppState";
 
 const useScreenWidthHook = () => {
   const { setScreenWidth } = AppState();
 
-  const GetScreenWidth = () => {
-    useEffect(() => {
-      window.addEventListener("resize", () => {
-        setScreenWidth(window.innerWidth);
-      });
-    }, []);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
 
-  return { GetScreenWidth };
+    // 🔥 ustaw od razu na start
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 };
 
 export default useScreenWidthHook;

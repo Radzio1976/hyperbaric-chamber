@@ -1,156 +1,160 @@
-.latest-reviews-section {
-    height: auto;
-    padding-top: 55px;
-    padding-bottom: 55px;
-    background-color: #42a0de;
-    overflow: hidden;
-    .latest-reviews-boxes {
-        max-width: 1260px;
-        margin: 0 auto;
-        padding: 0 43px;
-        @media (max-width: 450px) {
-            padding: 0 0;
-        }
-        .latest-reviews-boxes-title {
-            text-align: center;
-            padding-left: 20%;
-            padding-right: 20%;
-            margin-bottom: 40px;
-            h2 {
-                font-family: $font-montserrat;
-                font-size: 34px;
-                font-weight: bold;
-                color: #fff;
-                @media (max-width: 750px) {
-                    font-size: 28px;
-                }
-                @media (max-width: 650px) {
-                    font-size: 28px;
-                }
-            }
-            p {
-                color: #fff;
-                margin-bottom: 50px;
-                font-family: $font-montserrat;
-            }
-        }
-        .latest-reviews-boxes-container {
-            display: flex;
-            justify-content: space-between;
-            height: 395px;
-            margin-bottom: 50px;
-            @media (min-width: 901px) and (max-width: 950px) {
-                width: 720px;
-                margin: 0 auto;
-                margin-bottom: 50px;
-            }
-            .review-box {
-                width: 32.5%;
-                padding: 35px;
-                background-color: #fff;
-                cursor: pointer;
-                @media (max-width: 950px) {
-                    width: 48%;
-                }
-                @media (max-width: 900px) {
-                    width: 48%;
-                }
-                @media (max-width: 750px) {
-                    width: 48%;
-                }
-                @media (max-width: 650px) {
-                    width: 60%;
-                    margin: 0 auto;
-                }
-                @media (max-width: 600px) {
-                    width: 70%;
-                    margin: 0 auto;
-                }
-                @media (max-width: 550px) {
-                    width: 80%;
-                    margin: 0 auto;
-                }
-                @media (max-width: 500px) {
-                    width: 90%;
-                }
-                .user-avatar-and-name {
-                    display: flex;
-                    font-family: $font-montserrat;
-                    margin-bottom: 12px;
-                    img {
-                        width: 17%;
-                        margin-right: 25px;
-                    }
-                }
-                .review-stars-qty {
-                    margin-bottom: 12px;
-                }
-                .review-text {
-                    height: 130px;
-                    font-family: $font-montserrat;
-                    overflow: hidden;
-                    margin-bottom: 15px;
-                }
-                .review-read-more {
-                    font-family: $font-montserrat;
-                    color: #409ae9;
-                    margin-bottom: 25px;
-                }
-                .review-date {
-                    font-family: $font-montserrat;
-                    p {
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-        .review-prev-and-next-arrows {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 50px;
-            .slider-prev-button {
-                background-image: url("../../images/prev-button.png");
-                background-size: contain;
-                height: 50px;
-                width: 30px;
-                margin-right: 80px;
-                background-repeat: no-repeat;
-                cursor: pointer;
-            }
-            .slider-next-button {
-                background-image: url("../../images/next-button.png");
-                background-size: contain;
-                height: 50px;
-                width: 30px;
-                background-repeat: no-repeat;
-                cursor: pointer;
-            }
-        }
-        .latest-reviews-add-review-button-container {
-            display: flex;
-            justify-content: center;
-            div {
-                position: relative;
-                background-color: #fff;
-                width: 160px;
-                height: 51px;
-                cursor: pointer;
-                p {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    // padding: 14px 24px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-                    font-family: $font-montserrat;
-                    width: 149px;
-                    height: 43px;
-                    border: 1px solid #f8b805;
-                }
-            }
-        }
+.hyperbaric-chamber-latest-reviews-section {
+  height: auto;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background-color: #42a0de;
+  overflow: hidden;
+  .hyperbaric-chamber-latest-reviews-boxes {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 43px;
+    @media (max-width: 450px) {
+      padding: 0 0;
     }
+    .hyperbaric-chamber-latest-reviews-boxes-title {
+      text-align: center;
+      padding-left: 20%;
+      padding-right: 20%;
+      margin-bottom: 40px;
+      h2 {
+        font-family: $font-montserrat;
+        font-size: 34px;
+        font-weight: bold;
+        color: #fff;
+        @media (max-width: 750px) {
+          font-size: 28px;
+        }
+        @media (max-width: 650px) {
+          font-size: 28px;
+        }
+      }
+      p {
+        color: #fff;
+        margin-bottom: 50px;
+        font-family: $font-montserrat;
+      }
+    }
+    .hyperbaric-chamber-latest-reviews-boxes-container {
+      display: flex;
+      justify-content: space-between;
+      height: 395px;
+      margin-bottom: 50px;
+      @media (min-width: 901px) and (max-width: 950px) {
+        width: 720px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+      }
+      .hyperbaric-chamber-review-box {
+        width: 32.5%;
+        padding: 35px;
+        background-color: #fff;
+        cursor: pointer;
+        @media (max-width: 950px) {
+          width: 48%;
+        }
+        @media (max-width: 900px) {
+          width: 48%;
+        }
+        @media (max-width: 750px) {
+          width: 48%;
+        }
+        @media (max-width: 650px) {
+          width: 60%;
+          margin: 0 auto;
+        }
+        @media (max-width: 600px) {
+          width: 70%;
+          margin: 0 auto;
+        }
+        @media (max-width: 550px) {
+          width: 80%;
+          margin: 0 auto;
+        }
+        @media (max-width: 500px) {
+          width: 90%;
+        }
+        .hyperbaric-chamber-user-avatar-and-name {
+          display: flex;
+          font-family: $font-montserrat;
+          margin-bottom: 12px;
+          color: black;
+          img {
+            width: 17%;
+            margin-right: 25px;
+          }
+        }
+        .hyperbaric-chamber-review-stars-qty {
+          margin-bottom: 12px;
+        }
+        .hyperbaric-chamber-review-text {
+          height: 130px;
+          font-family: $font-montserrat;
+          overflow: hidden;
+          margin-bottom: 15px;
+          color: black;
+        }
+        .hyperbaric-chamber-review-read-more {
+          font-family: $font-montserrat;
+          color: #409ae9;
+          margin-bottom: 25px;
+        }
+        .hyperbaric-chamber-review-date {
+          font-family: $font-montserrat;
+          p {
+            font-size: 14px;
+            color: black;
+          }
+        }
+      }
+    }
+    .hyperbaric-chamber-review-prev-and-next-arrows {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+      .hyperbaric-chamber-slider-prev-button {
+        background-image: url("../../images/prev-button.png");
+        background-size: contain;
+        height: 50px;
+        width: 30px;
+        margin-right: 80px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .hyperbaric-chamber-slider-next-button {
+        background-image: url("../../images/next-button.png");
+        background-size: contain;
+        height: 50px;
+        width: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+    }
+    .hyperbaric-chamber-latest-reviews-add-review-button-container {
+      display: flex;
+      justify-content: center;
+      div {
+        position: relative;
+        background-color: #fff;
+        width: 160px;
+        height: 51px;
+        cursor: pointer;
+        p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          // padding: 14px 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          font-family: $font-montserrat;
+          width: 149px;
+          height: 43px;
+          border: 1px solid #f8b805;
+          color: black;
+        }
+      }
+    }
+  }
 }

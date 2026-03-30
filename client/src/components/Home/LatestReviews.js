@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import GoogleStar from "../../images/googleStar.png";
 
@@ -9,10 +9,12 @@ import useShowElementWhenToScrollTo from "../../hooks/useShowElementWhenToScroll
 import useScreenWidthHook from "../../hooks/useScreenWidthHook";
 
 const LatestReviews = (props) => {
-  const googleReviews = props.googleReviews;
+  const [reviews, setReviews] = useState([]);
+  // const googleReviews = props.googleReviews;
+  const { next, prev, googleReviewsForSlider } =
+    useGoogleReviewsSliderHook(reviews);
   const {
     googleReviewsStars,
-    googleReviewsForSlider,
     addGoogleReviewURL,
     googleReviewsSiteURL,
     isLatestReviewsBoxVisible,
@@ -20,39 +22,45 @@ const LatestReviews = (props) => {
     reviewsRef,
   } = AppState();
   const { goToGoogleReview } = useGoToGoogleReviewHook();
-  const { nextGoogleReviewsForSlider, prevGoogleReviewsForSlider } =
-    useGoogleReviewsSliderHook();
   const { showElementWhenScrollTo } = useShowElementWhenToScrollTo();
-  const { GetScreenWidth } = useScreenWidthHook();
-  GetScreenWidth();
+  useScreenWidthHook();
+
+  useEffect(() => {
+    fetch("http://localhost:3001/getReviews")
+      .then((res) => res.json())
+      .then((data) => {
+        setReviews(data.reversedReviews);
+      })
+      .catch(console.error);
+  }, []);
 
   useEffect(() => {
     showElementWhenScrollTo(reviewsRef, setIsLatestReviewsBoxVisible);
   }, []);
 
   return (
-    <div className="latest-reviews-section" ref={reviewsRef}>
-      <div className="latest-reviews-boxes">
-        <div className="latest-reviews-boxes-title">
+    <div className="hyperbaric-chamber-latest-reviews-section" ref={reviewsRef}>
+      <div className="hyperbaric-chamber-latest-reviews-boxes">
+        <div className="hyperbaric-chamber-latest-reviews-boxes-title">
           <h2>Ostatnie opinie</h2>
         </div>
-        <div className="latest-reviews-boxes-container">
+        <div className="hyperbaric-chamber-latest-reviews-boxes-container">
           {googleReviewsForSlider.map((review, i) => {
             return (
               <div
                 onClick={() => goToGoogleReview(googleReviewsSiteURL)}
                 key={review.id}
-                className={`review-box ${
+                className={`hyperbaric-chamber-review-box ${
                   isLatestReviewsBoxVisible
                     ? "animate__animated animate__lightSpeedInRight animate__delay-1s"
                     : ""
                 }`}
               >
-                <div className="user-avatar-and-name">
-                  <img src={review.userAvatar} alt={review.name}></img>
+                <div className="hyperbaric-chamber-user-avatar-and-name">
+                  <img src={review.userAvatar} alt=""></img>
                   <p>{review.name}</p>
                 </div>
-                <div className="review-stars-qty">
+                <div className="hyperbaric-chamber-review-stars-qty">
                   {googleReviewsStars.map((star, i) => {
                     return (
                       <img
@@ -68,34 +76,30 @@ const LatestReviews = (props) => {
                     );
                   })}
                 </div>
-                <div className="review-text">
+                <div className="hyperbaric-chamber-review-text">
                   <p>{review.reviewText}</p>
                 </div>
-                <div className="review-read-more">
+                <div className="hyperbaric-chamber-review-read-more">
                   <p>Więcej</p>
                 </div>
-                <div className="review-date">
+                <div className="hyperbaric-chamber-review-date">
                   <p>{review.date}</p>
                 </div>
               </div>
             );
           })}
         </div>
-        <div className="review-prev-and-next-arrows">
+        <div className="hyperbaric-chamber-review-prev-and-next-arrows">
           <div
-            onClick={() => {
-              prevGoogleReviewsForSlider(googleReviews);
-            }}
-            className="slider-prev-button"
+            onClick={prev}
+            className="hyperbaric-chamber-slider-prev-button"
           ></div>
           <div
-            onClick={() => {
-              nextGoogleReviewsForSlider(googleReviews);
-            }}
-            className="slider-next-button"
+            onClick={next}
+            className="hyperbaric-chamber-slider-next-button"
           ></div>
         </div>
-        <div className="latest-reviews-add-review-button-container">
+        <div className="hyperbaric-chamber-latest-reviews-add-review-button-container">
           <div>
             <p onClick={() => goToGoogleReview(addGoogleReviewURL)}>
               Dodaj opinię
