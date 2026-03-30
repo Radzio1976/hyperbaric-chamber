@@ -26,7 +26,7 @@ const LatestReviews = (props) => {
   useScreenWidthHook();
 
   useEffect(() => {
-    fetch("http://localhost:3001/getReviews")
+    fetch("/getReviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data.reversedReviews);
